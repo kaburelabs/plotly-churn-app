@@ -1,0 +1,93 @@
+{
+    "features": {
+        "CustomerID": "nothing",
+        "City": "nothing",
+        "Gender": [
+            "Female",
+            "Male"
+        ],
+        "Senior Citizen": [
+            "No",
+            "Yes"
+        ],
+        "Partner": [
+            "No",
+            "Yes"
+        ],
+        "Dependents": [
+            "No",
+            "Yes"
+        ],
+        "Tenure Months": [
+            0,
+            72
+        ],
+        "Phone Service": [
+            "Yes",
+            "No"
+        ],
+        "Multiple Lines": [
+            "Yes",
+            "No",
+            "No phone service"
+        ],
+        "Internet Service": [
+            "DSL",
+            "Fiber optic",
+            "No"
+        ],
+        "Online Security": [
+            "Yes",
+            "No",
+            "No internet service"
+        ],
+        "Online Backup": [
+            "No",
+            "Yes",
+            "No internet service"
+        ],
+        "Device Protection": [
+            "No",
+            "Yes",
+            "No internet service"
+        ],
+        "Tech Support": [
+            "No",
+            "Yes",
+            "No internet service"
+        ],
+        "Streaming TV": [
+            "No",
+            "Yes",
+            "No internet service"
+        ],
+        "Streaming Movies": [
+            "No",
+            "Yes",
+            "No internet service"
+        ],
+        "Contract": [
+            "Month-to-month",
+            "Two year",
+            "One year"
+        ],
+        "Paperless Billing": [
+            "No",
+            "Yes"
+        ],
+        "Payment Method": [
+            "Electronic check",
+            "Credit card (automatic)",
+            "Bank transfer (automatic)",
+            "Mailed check"
+        ],
+        "Monthly Charges": [
+            18.25,
+            118.75
+        ],
+        "Total Charges": [
+            0.0,
+            8684.8
+        ]
+    }
+}
