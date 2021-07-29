@@ -18,6 +18,8 @@ from components.utils.load_data import create_input_table
 from components.utils.load_model import prediction
 
 
+server = app.server
+
 project_list=load_input_dict().keys()
 
 app.layout=html.Div([
