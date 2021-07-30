@@ -1,3 +1,5 @@
 *.csv#
 *.pyc
 jupyter_notebooks
+/venv/
+logs.logs
