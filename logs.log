@@ -1,13 +1,13 @@
-2021-07-29 17:42:21,463:INFO:Initializing load_model()
-2021-07-29 17:42:21,463:INFO:load_model(model_name=churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
-2021-07-29 17:43:35,227:INFO:Initializing load_model()
-2021-07-29 17:43:35,227:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
-2021-07-29 17:43:36,423:INFO:Initializing load_model()
-2021-07-29 17:43:36,423:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
-2021-07-29 17:52:54,660:INFO:Initializing load_model()
-2021-07-29 17:52:54,660:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
-2021-07-29 17:53:22,357:INFO:Initializing predict_model()
-2021-07-29 17:53:22,358:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+2021-08-01 15:37:07,886:INFO:Initializing load_model()
+2021-08-01 15:37:07,886:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 15:37:09,399:INFO:Initializing load_model()
+2021-08-01 15:37:09,399:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 15:43:03,740:INFO:Initializing load_model()
+2021-08-01 15:43:03,740:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 15:46:16,388:INFO:Initializing load_model()
+2021-08-01 15:46:16,389:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 15:46:58,231:INFO:Initializing predict_model()
+2021-08-01 15:46:58,231:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
                  DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
                                       ml_usecase='classification',
                                       target='Churn Value')),
@@ -30,10 +30,62 @@
                                             min_samples_split=10,
                                             n_estimators=200, random_state=3738,
                                             subsample=0.3)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
-2021-07-29 17:53:22,358:INFO:Checking exceptions
-2021-07-29 17:53:22,358:INFO:Preloading libraries
-2021-07-29 17:54:18,545:INFO:Initializing predict_model()
-2021-07-29 17:54:18,545:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+2021-08-01 15:46:58,232:INFO:Checking exceptions
+2021-08-01 15:46:58,232:INFO:Preloading libraries
+2021-08-01 15:53:13,107:INFO:Initializing load_model()
+2021-08-01 15:53:13,107:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 15:54:20,236:INFO:Initializing load_model()
+2021-08-01 15:54:20,236:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 15:57:41,811:INFO:Initializing load_model()
+2021-08-01 15:57:41,811:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 15:59:43,860:INFO:Initializing load_model()
+2021-08-01 15:59:43,860:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 16:00:23,437:INFO:Initializing load_model()
+2021-08-01 16:00:23,437:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 16:00:32,450:INFO:Initializing load_model()
+2021-08-01 16:00:32,450:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 16:03:32,535:INFO:Initializing load_model()
+2021-08-01 16:03:32,535:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 16:03:45,660:INFO:Initializing load_model()
+2021-08-01 16:03:45,660:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 16:04:00,499:INFO:Initializing load_model()
+2021-08-01 16:04:00,499:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 16:07:04,802:INFO:Initializing load_model()
+2021-08-01 16:07:04,802:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 16:09:16,875:INFO:Initializing load_model()
+2021-08-01 16:09:16,875:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 16:09:43,422:INFO:Initializing load_model()
+2021-08-01 16:09:43,422:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 16:09:59,458:INFO:Initializing load_model()
+2021-08-01 16:09:59,458:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 16:27:35,069:INFO:Initializing load_model()
+2021-08-01 16:27:35,069:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 16:29:08,668:INFO:Initializing load_model()
+2021-08-01 16:29:08,668:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 16:31:25,380:INFO:Initializing load_model()
+2021-08-01 16:31:25,380:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 16:31:42,459:INFO:Initializing load_model()
+2021-08-01 16:31:42,459:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 16:33:44,463:INFO:Initializing load_model()
+2021-08-01 16:33:44,463:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 16:33:52,183:INFO:Initializing load_model()
+2021-08-01 16:33:52,183:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 16:37:13,595:INFO:Initializing load_model()
+2021-08-01 16:37:13,595:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 16:38:18,170:INFO:Initializing load_model()
+2021-08-01 16:38:18,170:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 16:38:28,027:INFO:Initializing load_model()
+2021-08-01 16:38:28,027:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 16:39:59,377:INFO:Initializing load_model()
+2021-08-01 16:39:59,377:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 16:40:44,509:INFO:Initializing load_model()
+2021-08-01 16:40:44,509:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 16:51:44,081:INFO:Initializing load_model()
+2021-08-01 16:51:44,081:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 16:52:46,722:INFO:Initializing load_model()
+2021-08-01 16:52:46,722:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 16:53:11,336:INFO:Initializing predict_model()
+2021-08-01 16:53:11,336:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
                  DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
                                       ml_usecase='classification',
                                       target='Churn Value')),
@@ -56,10 +108,10 @@
                                             min_samples_split=10,
                                             n_estimators=200, random_state=3738,
                                             subsample=0.3)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
-2021-07-29 17:54:18,545:INFO:Checking exceptions
-2021-07-29 17:54:18,545:INFO:Preloading libraries
-2021-07-29 17:54:52,870:INFO:Initializing predict_model()
-2021-07-29 17:54:52,870:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+2021-08-01 16:53:11,336:INFO:Checking exceptions
+2021-08-01 16:53:11,336:INFO:Preloading libraries
+2021-08-01 16:53:20,654:INFO:Initializing predict_model()
+2021-08-01 16:53:20,654:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
                  DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
                                       ml_usecase='classification',
                                       target='Churn Value')),
@@ -82,10 +134,42 @@
                                             min_samples_split=10,
                                             n_estimators=200, random_state=3738,
                                             subsample=0.3)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
-2021-07-29 17:54:52,870:INFO:Checking exceptions
-2021-07-29 17:54:52,870:INFO:Preloading libraries
-2021-07-29 17:54:55,462:INFO:Initializing predict_model()
-2021-07-29 17:54:55,462:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+2021-08-01 16:53:20,654:INFO:Checking exceptions
+2021-08-01 16:53:20,654:INFO:Preloading libraries
+2021-08-01 16:56:42,512:INFO:Initializing load_model()
+2021-08-01 16:56:42,512:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:00:06,457:INFO:Initializing load_model()
+2021-08-01 17:00:06,458:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:00:50,397:INFO:Initializing load_model()
+2021-08-01 17:00:50,397:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:02:07,186:INFO:Initializing load_model()
+2021-08-01 17:02:07,187:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:05:03,898:INFO:Initializing load_model()
+2021-08-01 17:05:03,898:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:05:54,094:INFO:Initializing load_model()
+2021-08-01 17:05:54,094:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:06:29,970:INFO:Initializing load_model()
+2021-08-01 17:06:29,971:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:07:00,475:INFO:Initializing load_model()
+2021-08-01 17:07:00,475:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:07:05,103:INFO:Initializing load_model()
+2021-08-01 17:07:05,103:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:08:23,767:INFO:Initializing load_model()
+2021-08-01 17:08:23,767:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:08:25,297:INFO:Initializing load_model()
+2021-08-01 17:08:25,297:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:08:37,985:INFO:Initializing load_model()
+2021-08-01 17:08:37,985:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:08:39,393:INFO:Initializing load_model()
+2021-08-01 17:08:39,394:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:10:16,386:INFO:Initializing load_model()
+2021-08-01 17:10:16,386:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:10:31,372:INFO:Initializing load_model()
+2021-08-01 17:10:31,372:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:13:01,864:INFO:Initializing load_model()
+2021-08-01 17:13:01,864:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:13:24,563:INFO:Initializing predict_model()
+2021-08-01 17:13:24,563:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
                  DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
                                       ml_usecase='classification',
                                       target='Churn Value')),
@@ -108,10 +192,10 @@
                                             min_samples_split=10,
                                             n_estimators=200, random_state=3738,
                                             subsample=0.3)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
-2021-07-29 17:54:55,462:INFO:Checking exceptions
-2021-07-29 17:54:55,462:INFO:Preloading libraries
-2021-07-29 17:55:00,990:INFO:Initializing predict_model()
-2021-07-29 17:55:00,990:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+2021-08-01 17:13:24,563:INFO:Checking exceptions
+2021-08-01 17:13:24,563:INFO:Preloading libraries
+2021-08-01 17:18:38,639:INFO:Initializing predict_model()
+2021-08-01 17:18:38,639:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
                  DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
                                       ml_usecase='classification',
                                       target='Churn Value')),
@@ -134,10 +218,10 @@
                                             min_samples_split=10,
                                             n_estimators=200, random_state=3738,
                                             subsample=0.3)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
-2021-07-29 17:55:00,990:INFO:Checking exceptions
-2021-07-29 17:55:00,990:INFO:Preloading libraries
-2021-07-29 17:57:33,476:INFO:Initializing predict_model()
-2021-07-29 17:57:33,476:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+2021-08-01 17:18:38,639:INFO:Checking exceptions
+2021-08-01 17:18:38,639:INFO:Preloading libraries
+2021-08-01 17:18:44,895:INFO:Initializing predict_model()
+2021-08-01 17:18:44,895:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
                  DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
                                       ml_usecase='classification',
                                       target='Churn Value')),
@@ -160,10 +244,10 @@
                                             min_samples_split=10,
                                             n_estimators=200, random_state=3738,
                                             subsample=0.3)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
-2021-07-29 17:57:33,476:INFO:Checking exceptions
-2021-07-29 17:57:33,476:INFO:Preloading libraries
-2021-07-29 17:57:41,224:INFO:Initializing predict_model()
-2021-07-29 17:57:41,224:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+2021-08-01 17:18:44,895:INFO:Checking exceptions
+2021-08-01 17:18:44,895:INFO:Preloading libraries
+2021-08-01 17:18:50,601:INFO:Initializing predict_model()
+2021-08-01 17:18:50,601:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
                  DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
                                       ml_usecase='classification',
                                       target='Churn Value')),
@@ -186,10 +270,56 @@
                                             min_samples_split=10,
                                             n_estimators=200, random_state=3738,
                                             subsample=0.3)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
-2021-07-29 17:57:41,224:INFO:Checking exceptions
-2021-07-29 17:57:41,224:INFO:Preloading libraries
-2021-07-29 17:57:45,725:INFO:Initializing predict_model()
-2021-07-29 17:57:45,725:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+2021-08-01 17:18:50,601:INFO:Checking exceptions
+2021-08-01 17:18:50,601:INFO:Preloading libraries
+2021-08-01 17:20:36,746:INFO:Initializing load_model()
+2021-08-01 17:20:36,746:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:20:49,381:INFO:Initializing load_model()
+2021-08-01 17:20:49,381:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:21:27,602:INFO:Initializing load_model()
+2021-08-01 17:21:27,602:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:21:46,323:INFO:Initializing load_model()
+2021-08-01 17:21:46,323:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:22:38,797:INFO:Initializing load_model()
+2021-08-01 17:22:38,797:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:25:16,487:INFO:Initializing load_model()
+2021-08-01 17:25:16,487:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:26:35,667:INFO:Initializing load_model()
+2021-08-01 17:26:35,667:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:27:03,953:INFO:Initializing load_model()
+2021-08-01 17:27:03,953:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:29:44,973:INFO:Initializing load_model()
+2021-08-01 17:29:44,973:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:30:33,565:INFO:Initializing load_model()
+2021-08-01 17:30:33,565:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:30:45,238:INFO:Initializing load_model()
+2021-08-01 17:30:45,238:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:33:54,049:INFO:Initializing load_model()
+2021-08-01 17:33:54,049:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:35:05,935:INFO:Initializing load_model()
+2021-08-01 17:35:05,935:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:36:42,241:INFO:Initializing load_model()
+2021-08-01 17:36:42,241:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:37:13,664:INFO:Initializing load_model()
+2021-08-01 17:37:13,664:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:38:58,420:INFO:Initializing load_model()
+2021-08-01 17:38:58,420:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:41:06,712:INFO:Initializing load_model()
+2021-08-01 17:41:06,712:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:41:15,257:INFO:Initializing load_model()
+2021-08-01 17:41:15,257:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:41:55,520:INFO:Initializing load_model()
+2021-08-01 17:41:55,520:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:43:15,156:INFO:Initializing load_model()
+2021-08-01 17:43:15,156:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:43:31,933:INFO:Initializing load_model()
+2021-08-01 17:43:31,933:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:44:20,315:INFO:Initializing load_model()
+2021-08-01 17:44:20,315:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:44:38,067:INFO:Initializing load_model()
+2021-08-01 17:44:38,068:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:47:01,850:INFO:Initializing predict_model()
+2021-08-01 17:47:01,850:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
                  DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
                                       ml_usecase='classification',
                                       target='Churn Value')),
@@ -212,10 +342,10 @@
                                             min_samples_split=10,
                                             n_estimators=200, random_state=3738,
                                             subsample=0.3)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
-2021-07-29 17:57:45,725:INFO:Checking exceptions
-2021-07-29 17:57:45,725:INFO:Preloading libraries
-2021-07-29 17:57:50,387:INFO:Initializing predict_model()
-2021-07-29 17:57:50,387:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+2021-08-01 17:47:01,850:INFO:Checking exceptions
+2021-08-01 17:47:01,850:INFO:Preloading libraries
+2021-08-01 17:47:10,265:INFO:Initializing predict_model()
+2021-08-01 17:47:10,265:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
                  DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
                                       ml_usecase='classification',
                                       target='Churn Value')),
@@ -238,10 +368,10 @@
                                             min_samples_split=10,
                                             n_estimators=200, random_state=3738,
                                             subsample=0.3)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
-2021-07-29 17:57:50,387:INFO:Checking exceptions
-2021-07-29 17:57:50,387:INFO:Preloading libraries
-2021-07-29 17:57:54,655:INFO:Initializing predict_model()
-2021-07-29 17:57:54,655:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+2021-08-01 17:47:10,265:INFO:Checking exceptions
+2021-08-01 17:47:10,265:INFO:Preloading libraries
+2021-08-01 17:47:16,528:INFO:Initializing predict_model()
+2021-08-01 17:47:16,528:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
                  DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
                                       ml_usecase='classification',
                                       target='Churn Value')),
@@ -264,10 +394,12 @@
                                             min_samples_split=10,
                                             n_estimators=200, random_state=3738,
                                             subsample=0.3)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
-2021-07-29 17:57:54,655:INFO:Checking exceptions
-2021-07-29 17:57:54,655:INFO:Preloading libraries
-2021-07-29 17:57:57,158:INFO:Initializing predict_model()
-2021-07-29 17:57:57,158:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+2021-08-01 17:47:16,528:INFO:Checking exceptions
+2021-08-01 17:47:16,528:INFO:Preloading libraries
+2021-08-01 17:48:16,158:INFO:Initializing load_model()
+2021-08-01 17:48:16,159:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:48:28,844:INFO:Initializing predict_model()
+2021-08-01 17:48:28,844:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
                  DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
                                       ml_usecase='classification',
                                       target='Churn Value')),
@@ -290,10 +422,20 @@
                                             min_samples_split=10,
                                             n_estimators=200, random_state=3738,
                                             subsample=0.3)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
-2021-07-29 17:57:57,158:INFO:Checking exceptions
-2021-07-29 17:57:57,158:INFO:Preloading libraries
-2021-07-29 17:57:59,804:INFO:Initializing predict_model()
-2021-07-29 17:57:59,804:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+2021-08-01 17:48:28,844:INFO:Checking exceptions
+2021-08-01 17:48:28,844:INFO:Preloading libraries
+2021-08-01 17:49:27,636:INFO:Initializing load_model()
+2021-08-01 17:49:27,636:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:52:42,540:INFO:Initializing load_model()
+2021-08-01 17:52:42,540:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:53:30,150:INFO:Initializing load_model()
+2021-08-01 17:53:30,150:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:53:45,773:INFO:Initializing load_model()
+2021-08-01 17:53:45,773:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:57:45,731:INFO:Initializing load_model()
+2021-08-01 17:57:45,731:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 17:58:07,260:INFO:Initializing predict_model()
+2021-08-01 17:58:07,260:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
                  DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
                                       ml_usecase='classification',
                                       target='Churn Value')),
@@ -316,10 +458,22 @@
                                             min_samples_split=10,
                                             n_estimators=200, random_state=3738,
                                             subsample=0.3)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
-2021-07-29 17:57:59,804:INFO:Checking exceptions
-2021-07-29 17:57:59,804:INFO:Preloading libraries
-2021-07-29 17:58:04,471:INFO:Initializing predict_model()
-2021-07-29 17:58:04,471:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+2021-08-01 17:58:07,260:INFO:Checking exceptions
+2021-08-01 17:58:07,260:INFO:Preloading libraries
+2021-08-01 17:59:29,930:INFO:Initializing load_model()
+2021-08-01 17:59:29,930:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 18:01:25,418:INFO:Initializing load_model()
+2021-08-01 18:01:25,418:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 18:01:26,613:INFO:Initializing load_model()
+2021-08-01 18:01:26,613:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 18:02:37,592:INFO:Initializing load_model()
+2021-08-01 18:02:37,592:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 18:02:55,462:INFO:Initializing load_model()
+2021-08-01 18:02:55,462:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 18:03:56,066:INFO:Initializing load_model()
+2021-08-01 18:03:56,066:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 18:06:19,700:INFO:Initializing predict_model()
+2021-08-01 18:06:19,700:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
                  DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
                                       ml_usecase='classification',
                                       target='Churn Value')),
@@ -342,307 +496,11 @@
                                             min_samples_split=10,
                                             n_estimators=200, random_state=3738,
                                             subsample=0.3)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
-2021-07-29 17:58:04,471:INFO:Checking exceptions
-2021-07-29 17:58:04,471:INFO:Preloading libraries
-2021-07-29 17:58:09,097:INFO:Initializing predict_model()
-2021-07-29 17:58:09,097:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
-                 DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
-                                      ml_usecase='classification',
-                                      target='Churn Value')),
-                ('imputer',
-                 Simple_Imputer(categorical_strategy='not_available',
-                                fill_value_categorical=None,
-                                fill_value_numerical=None,
-                                numeric_strategy='mean',
-                                target_variable=None)),
-                ('new_levels1',
-                 New_Catagorical_Levels_in_TestData(r...
-                ('clean_names', Clean_Colum_Names()),
-                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
-                ('dfs', 'passthrough'), ('pca', 'passthrough'),
-                ['trained_model',
-                 GradientBoostingClassifier(learning_rate=0.05, max_depth=2,
-                                            max_features='sqrt',
-                                            min_impurity_decrease=0.2,
-                                            min_samples_leaf=2,
-                                            min_samples_split=10,
-                                            n_estimators=200, random_state=3738,
-                                            subsample=0.3)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
-2021-07-29 17:58:09,097:INFO:Checking exceptions
-2021-07-29 17:58:09,097:INFO:Preloading libraries
-2021-07-29 17:58:16,248:INFO:Initializing predict_model()
-2021-07-29 17:58:16,248:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
-                 DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
-                                      ml_usecase='classification',
-                                      target='Churn Value')),
-                ('imputer',
-                 Simple_Imputer(categorical_strategy='not_available',
-                                fill_value_categorical=None,
-                                fill_value_numerical=None,
-                                numeric_strategy='mean',
-                                target_variable=None)),
-                ('new_levels1',
-                 New_Catagorical_Levels_in_TestData(r...
-                ('clean_names', Clean_Colum_Names()),
-                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
-                ('dfs', 'passthrough'), ('pca', 'passthrough'),
-                ['trained_model',
-                 GradientBoostingClassifier(learning_rate=0.05, max_depth=2,
-                                            max_features='sqrt',
-                                            min_impurity_decrease=0.2,
-                                            min_samples_leaf=2,
-                                            min_samples_split=10,
-                                            n_estimators=200, random_state=3738,
-                                            subsample=0.3)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
-2021-07-29 17:58:16,248:INFO:Checking exceptions
-2021-07-29 17:58:16,248:INFO:Preloading libraries
-2021-07-29 17:58:38,402:INFO:Initializing predict_model()
-2021-07-29 17:58:38,402:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
-                 DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
-                                      ml_usecase='classification',
-                                      target='Churn Value')),
-                ('imputer',
-                 Simple_Imputer(categorical_strategy='not_available',
-                                fill_value_categorical=None,
-                                fill_value_numerical=None,
-                                numeric_strategy='mean',
-                                target_variable=None)),
-                ('new_levels1',
-                 New_Catagorical_Levels_in_TestData(r...
-                ('clean_names', Clean_Colum_Names()),
-                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
-                ('dfs', 'passthrough'), ('pca', 'passthrough'),
-                ['trained_model',
-                 GradientBoostingClassifier(learning_rate=0.05, max_depth=2,
-                                            max_features='sqrt',
-                                            min_impurity_decrease=0.2,
-                                            min_samples_leaf=2,
-                                            min_samples_split=10,
-                                            n_estimators=200, random_state=3738,
-                                            subsample=0.3)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
-2021-07-29 17:58:38,402:INFO:Checking exceptions
-2021-07-29 17:58:38,402:INFO:Preloading libraries
-2021-07-29 18:00:06,583:INFO:Initializing predict_model()
-2021-07-29 18:00:06,583:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
-                 DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
-                                      ml_usecase='classification',
-                                      target='Churn Value')),
-                ('imputer',
-                 Simple_Imputer(categorical_strategy='not_available',
-                                fill_value_categorical=None,
-                                fill_value_numerical=None,
-                                numeric_strategy='mean',
-                                target_variable=None)),
-                ('new_levels1',
-                 New_Catagorical_Levels_in_TestData(r...
-                ('clean_names', Clean_Colum_Names()),
-                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
-                ('dfs', 'passthrough'), ('pca', 'passthrough'),
-                ['trained_model',
-                 GradientBoostingClassifier(learning_rate=0.05, max_depth=2,
-                                            max_features='sqrt',
-                                            min_impurity_decrease=0.2,
-                                            min_samples_leaf=2,
-                                            min_samples_split=10,
-                                            n_estimators=200, random_state=3738,
-                                            subsample=0.3)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
-2021-07-29 18:00:06,583:INFO:Checking exceptions
-2021-07-29 18:00:06,583:INFO:Preloading libraries
-2021-07-29 18:00:18,939:INFO:Initializing predict_model()
-2021-07-29 18:00:18,939:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
-                 DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
-                                      ml_usecase='classification',
-                                      target='Churn Value')),
-                ('imputer',
-                 Simple_Imputer(categorical_strategy='not_available',
-                                fill_value_categorical=None,
-                                fill_value_numerical=None,
-                                numeric_strategy='mean',
-                                target_variable=None)),
-                ('new_levels1',
-                 New_Catagorical_Levels_in_TestData(r...
-                ('clean_names', Clean_Colum_Names()),
-                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
-                ('dfs', 'passthrough'), ('pca', 'passthrough'),
-                ['trained_model',
-                 GradientBoostingClassifier(learning_rate=0.05, max_depth=2,
-                                            max_features='sqrt',
-                                            min_impurity_decrease=0.2,
-                                            min_samples_leaf=2,
-                                            min_samples_split=10,
-                                            n_estimators=200, random_state=3738,
-                                            subsample=0.3)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
-2021-07-29 18:00:18,939:INFO:Checking exceptions
-2021-07-29 18:00:18,939:INFO:Preloading libraries
-2021-07-29 18:00:21,948:INFO:Initializing predict_model()
-2021-07-29 18:00:21,948:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
-                 DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
-                                      ml_usecase='classification',
-                                      target='Churn Value')),
-                ('imputer',
-                 Simple_Imputer(categorical_strategy='not_available',
-                                fill_value_categorical=None,
-                                fill_value_numerical=None,
-                                numeric_strategy='mean',
-                                target_variable=None)),
-                ('new_levels1',
-                 New_Catagorical_Levels_in_TestData(r...
-                ('clean_names', Clean_Colum_Names()),
-                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
-                ('dfs', 'passthrough'), ('pca', 'passthrough'),
-                ['trained_model',
-                 GradientBoostingClassifier(learning_rate=0.05, max_depth=2,
-                                            max_features='sqrt',
-                                            min_impurity_decrease=0.2,
-                                            min_samples_leaf=2,
-                                            min_samples_split=10,
-                                            n_estimators=200, random_state=3738,
-                                            subsample=0.3)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
-2021-07-29 18:00:21,948:INFO:Checking exceptions
-2021-07-29 18:00:21,948:INFO:Preloading libraries
-2021-07-29 18:00:23,961:INFO:Initializing predict_model()
-2021-07-29 18:00:23,961:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
-                 DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
-                                      ml_usecase='classification',
-                                      target='Churn Value')),
-                ('imputer',
-                 Simple_Imputer(categorical_strategy='not_available',
-                                fill_value_categorical=None,
-                                fill_value_numerical=None,
-                                numeric_strategy='mean',
-                                target_variable=None)),
-                ('new_levels1',
-                 New_Catagorical_Levels_in_TestData(r...
-                ('clean_names', Clean_Colum_Names()),
-                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
-                ('dfs', 'passthrough'), ('pca', 'passthrough'),
-                ['trained_model',
-                 GradientBoostingClassifier(learning_rate=0.05, max_depth=2,
-                                            max_features='sqrt',
-                                            min_impurity_decrease=0.2,
-                                            min_samples_leaf=2,
-                                            min_samples_split=10,
-                                            n_estimators=200, random_state=3738,
-                                            subsample=0.3)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
-2021-07-29 18:00:23,961:INFO:Checking exceptions
-2021-07-29 18:00:23,961:INFO:Preloading libraries
-2021-07-29 18:00:57,419:INFO:Initializing load_model()
-2021-07-29 18:00:57,419:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
-2021-07-29 18:02:39,262:INFO:Initializing load_model()
-2021-07-29 18:02:39,262:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
-2021-07-29 18:04:55,953:INFO:Initializing predict_model()
-2021-07-29 18:04:55,953:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
-                 DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
-                                      ml_usecase='classification',
-                                      target='Churn Value')),
-                ('imputer',
-                 Simple_Imputer(categorical_strategy='not_available',
-                                fill_value_categorical=None,
-                                fill_value_numerical=None,
-                                numeric_strategy='mean',
-                                target_variable=None)),
-                ('new_levels1',
-                 New_Catagorical_Levels_in_TestData(r...
-                ('clean_names', Clean_Colum_Names()),
-                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
-                ('dfs', 'passthrough'), ('pca', 'passthrough'),
-                ['trained_model',
-                 GradientBoostingClassifier(learning_rate=0.05, max_depth=2,
-                                            max_features='sqrt',
-                                            min_impurity_decrease=0.2,
-                                            min_samples_leaf=2,
-                                            min_samples_split=10,
-                                            n_estimators=200, random_state=3738,
-                                            subsample=0.3)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
-2021-07-29 18:04:55,953:INFO:Checking exceptions
-2021-07-29 18:04:55,953:INFO:Preloading libraries
-2021-07-29 18:05:11,323:INFO:Initializing predict_model()
-2021-07-29 18:05:11,323:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
-                 DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
-                                      ml_usecase='classification',
-                                      target='Churn Value')),
-                ('imputer',
-                 Simple_Imputer(categorical_strategy='not_available',
-                                fill_value_categorical=None,
-                                fill_value_numerical=None,
-                                numeric_strategy='mean',
-                                target_variable=None)),
-                ('new_levels1',
-                 New_Catagorical_Levels_in_TestData(r...
-                ('clean_names', Clean_Colum_Names()),
-                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
-                ('dfs', 'passthrough'), ('pca', 'passthrough'),
-                ['trained_model',
-                 GradientBoostingClassifier(learning_rate=0.05, max_depth=2,
-                                            max_features='sqrt',
-                                            min_impurity_decrease=0.2,
-                                            min_samples_leaf=2,
-                                            min_samples_split=10,
-                                            n_estimators=200, random_state=3738,
-                                            subsample=0.3)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
-2021-07-29 18:05:11,323:INFO:Checking exceptions
-2021-07-29 18:05:11,324:INFO:Preloading libraries
-2021-07-29 18:56:35,052:INFO:Initializing load_model()
-2021-07-29 18:56:35,052:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
-2021-07-29 18:56:36,354:INFO:Initializing load_model()
-2021-07-29 18:56:36,354:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
-2021-07-29 18:57:05,198:INFO:Initializing predict_model()
-2021-07-29 18:57:05,198:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
-                 DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
-                                      ml_usecase='classification',
-                                      target='Churn Value')),
-                ('imputer',
-                 Simple_Imputer(categorical_strategy='not_available',
-                                fill_value_categorical=None,
-                                fill_value_numerical=None,
-                                numeric_strategy='mean',
-                                target_variable=None)),
-                ('new_levels1',
-                 New_Catagorical_Levels_in_TestData(r...
-                ('clean_names', Clean_Colum_Names()),
-                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
-                ('dfs', 'passthrough'), ('pca', 'passthrough'),
-                ['trained_model',
-                 GradientBoostingClassifier(learning_rate=0.05, max_depth=2,
-                                            max_features='sqrt',
-                                            min_impurity_decrease=0.2,
-                                            min_samples_leaf=2,
-                                            min_samples_split=10,
-                                            n_estimators=200, random_state=3738,
-                                            subsample=0.3)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
-2021-07-29 18:57:05,198:INFO:Checking exceptions
-2021-07-29 18:57:05,198:INFO:Preloading libraries
-2021-07-29 20:22:42,707:INFO:Initializing load_model()
-2021-07-29 20:22:42,707:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
-2021-07-29 20:22:44,108:INFO:Initializing load_model()
-2021-07-29 20:22:44,108:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
-2021-07-29 21:18:10,336:INFO:Initializing load_model()
-2021-07-29 21:18:10,336:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
-2021-07-29 21:18:11,820:INFO:Initializing load_model()
-2021-07-29 21:18:11,820:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
-2021-07-29 21:18:43,615:INFO:Initializing predict_model()
-2021-07-29 21:18:43,616:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
-                 DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
-                                      ml_usecase='classification',
-                                      target='Churn Value')),
-                ('imputer',
-                 Simple_Imputer(categorical_strategy='not_available',
-                                fill_value_categorical=None,
-                                fill_value_numerical=None,
-                                numeric_strategy='mean',
-                                target_variable=None)),
-                ('new_levels1',
-                 New_Catagorical_Levels_in_TestData(r...
-                ('clean_names', Clean_Colum_Names()),
-                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
-                ('dfs', 'passthrough'), ('pca', 'passthrough'),
-                ['trained_model',
-                 GradientBoostingClassifier(learning_rate=0.05, max_depth=2,
-                                            max_features='sqrt',
-                                            min_impurity_decrease=0.2,
-                                            min_samples_leaf=2,
-                                            min_samples_split=10,
-                                            n_estimators=200, random_state=3738,
-                                            subsample=0.3)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
-2021-07-29 21:18:43,616:INFO:Checking exceptions
-2021-07-29 21:18:43,616:INFO:Preloading libraries
+2021-08-01 18:06:19,700:INFO:Checking exceptions
+2021-08-01 18:06:19,700:INFO:Preloading libraries
+2021-08-01 18:07:58,759:INFO:Initializing load_model()
+2021-08-01 18:07:58,759:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 18:09:14,179:INFO:Initializing load_model()
+2021-08-01 18:09:14,179:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
+2021-08-01 18:11:36,764:INFO:Initializing load_model()
+2021-08-01 18:11:36,764:INFO:load_model(model_name=assets/ml_models_binaries/churn-model-optimized-auc, platform=None, authentication=None, verbose=True)
