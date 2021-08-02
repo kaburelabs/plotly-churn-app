@@ -17,3 +17,5 @@ app.config.suppress_callback_exceptions = True
 app.css.config.serve_locally=True
 
 app.title="Plotly Telco"
+
+

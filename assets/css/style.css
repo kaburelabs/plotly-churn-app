@@ -102,7 +102,14 @@
     height: 100%;
 }
 
+.extra-inputs-layout {    
+    background: #e0ecec;
+    padding: 16px;
+}
 
+.red {
+    color: red;
+}
 
 /* Centralizing classes */
 .centralize {
@@ -148,7 +155,7 @@
 
 
 .style-input-cards {
-    background: #d9d9ea;
+    background: #f0f0f5;
     padding: 16px;
     border-radius: 8px;
     height: 100%;

@@ -14,10 +14,11 @@ import time
 
 from components.utils.generate_dropdowns import input_components, load_input_dict
 
-from components.utils.load_data import create_input_table
+from components.utils.load_data import create_input_table, data_transformation
 
 from components.utils.load_model import prediction
 
+import random 
 
 project_list=load_input_dict().keys()
 
@@ -30,10 +31,12 @@ prediction_layout=html.Div(
                                             id="btn-predict", 
                                             className="buttonStyle bottom16 right4"),
                                   html.Button(["Load sample"], 
-                                            id="btn-load", 
-                                            className="buttonStyle bottom16 left4")
+                                            id="btn-load-sample", 
+                                            className="buttonStyle bottom16 left4"),
+
                                   ]),
-                      dbc.Alert(
+                        html.Div(id="input-churn-sample", className="red font-xs"),
+                        dbc.Alert(
                             id="alert-empty-inputs",
                             is_open=False,
                             duration=5000, color="danger",
@@ -52,7 +55,6 @@ def generating_dropdowns(dropdown_data):
 
     return html.Div([
         html.Div([
-            # html.H3("Churn Model "), 
             html.Div(dbc.Row(
                 [
                     dbc.Col([
@@ -115,7 +117,7 @@ def generating_dropdowns(dropdown_data):
                                             html.H4(["Contract", html.Span("*", style={"color":"red"})], className="font-sm"),
                                             dcc.Dropdown(id="input-Contract", 
                                                     options=[{"label": "Monthly" if val == "Month-to-month" else val, "value":val} \
-                                                        for val in ["Month-to-month", "One Year", "Two Years"]],
+                                                        for val in dropdown_data["Contract"]],
                                                         value=None,
                                                         clearable=False,
                                                         placeholder="Monhtly, yearly...")
@@ -191,71 +193,73 @@ def generating_dropdowns(dropdown_data):
                                             lg=2, className="bottom16", style={"display":"contents"})
                                 ]),
                                 dbc.Collapse([
-                                    dbc.Row([
-                                        dbc.Col(html.Div(
-                                            [
-                                                html.H4("Multiple Lines", className="font-sm"),
-                                                dcc.Dropdown(id="input-Multiple Lines", 
-                                                        options=[{"label":val, "value":val} \
-                                                            for val in dropdown_data["Multiple Lines"]],
-                                                            value="No",
-                                                        clearable=False)
-                                            ]), lg=3, className="bottom16"),
-                                        dbc.Col(html.Div(
-                                            [
-                                                html.H4("Online Security", className="font-sm"),
-                                                dcc.Dropdown(id="input-Online Security", 
-                                                        options=[{"label":val, "value":val} \
-                                                            for val in dropdown_data["Online Security"]],
-                                                            value="No",
-                                                        clearable=False)
-                                            ]), lg=3, className="bottom16"),
-                                        dbc.Col(html.Div(
-                                            [
-                                                html.H4("Online Backup", className="font-sm"),
-                                                dcc.Dropdown(id="input-Online Backup", 
-                                                        options=[{"label":val, "value":val} \
-                                                            for val in dropdown_data["Online Backup"]],
-                                                            value="No",
-                                                        clearable=False)
-                                            ]), lg=3, className="bottom16"),
-                                        dbc.Col(html.Div(
-                                            [
-                                                html.H4("Device Protection", className="font-sm"),
-                                                dcc.Dropdown(id="input-Device Protection", 
-                                                        options=[{"label":val, "value":val} \
-                                                            for val in dropdown_data["Device Protection"]],
-                                                            value="No",
-                                                        clearable=False)
-                                            ]), lg=3, className="bottom16"),
-                                        dbc.Col(html.Div(
-                                            [
-                                                html.H4("Tech Support", className="font-sm"),
-                                                dcc.Dropdown(id="input-Tech Support", 
-                                                        options=[{"label":val, "value":val} \
-                                                            for val in dropdown_data["Tech Support"]],
-                                                            value="No",
-                                                        clearable=False)
-                                            ]), lg=3, className="bottom16"),
-                                        dbc.Col(html.Div(
-                                            [
-                                                html.H4("Streaming TV", className="font-sm"),
-                                                dcc.Dropdown(id="input-Streaming TV", 
-                                                        options=[{"label":val, "value":val} \
-                                                            for val in dropdown_data["Streaming TV"]],
-                                                            value="No",
-                                                        clearable=False)
-                                            ]), lg=3, className="bottom16"),
-                                        dbc.Col(html.Div(
-                                            [
-                                                html.H4("Streaming Movies", className="font-sm"),
-                                                dcc.Dropdown(id="input-Streaming Movies", 
-                                                        options=[{"label":val, "value":val} \
-                                                            for val in dropdown_data["Streaming Movies"]],
-                                                            value="No",
-                                                        clearable=False)
-                                            ]), lg=3, className="bottom16")
-                                    ])
+                                    html.Div(
+                                        dbc.Row([
+                                            dbc.Col(html.Div(
+                                                [
+                                                    html.H4("Multiple Lines", className="font-sm"),
+                                                    dcc.Dropdown(id="input-Multiple Lines", 
+                                                            options=[{"label":val, "value":val} \
+                                                                for val in dropdown_data["Multiple Lines"]],
+                                                                value="No",
+                                                            clearable=False)
+                                                ]), lg=3, className="bottom16"),
+                                            dbc.Col(html.Div(
+                                                [
+                                                    html.H4("Online Security", className="font-sm"),
+                                                    dcc.Dropdown(id="input-Online Security", 
+                                                            options=[{"label":val, "value":val} \
+                                                                for val in dropdown_data["Online Security"]],
+                                                                value="No",
+                                                            clearable=False)
+                                                ]), lg=3, className="bottom16"),
+                                            dbc.Col(html.Div(
+                                                [
+                                                    html.H4("Online Backup", className="font-sm"),
+                                                    dcc.Dropdown(id="input-Online Backup", 
+                                                            options=[{"label":val, "value":val} \
+                                                                for val in dropdown_data["Online Backup"]],
+                                                                value="No",
+                                                            clearable=False)
+                                                ]), lg=3, className="bottom16"),
+                                            dbc.Col(html.Div(
+                                                [
+                                                    html.H4("Device Protection", className="font-sm"),
+                                                    dcc.Dropdown(id="input-Device Protection", 
+                                                            options=[{"label":val, "value":val} \
+                                                                for val in dropdown_data["Device Protection"]],
+                                                                value="No",
+                                                            clearable=False)
+                                                ]), lg=3, className="bottom16"),
+                                            dbc.Col(html.Div(
+                                                [
+                                                    html.H4("Tech Support", className="font-sm"),
+                                                    dcc.Dropdown(id="input-Tech Support", 
+                                                            options=[{"label":val, "value":val} \
+                                                                for val in dropdown_data["Tech Support"]],
+                                                                value="No",
+                                                            clearable=False)
+                                                ]), lg=3, className="bottom16"),
+                                            dbc.Col(html.Div(
+                                                [
+                                                    html.H4("Streaming TV", className="font-sm"),
+                                                    dcc.Dropdown(id="input-Streaming TV", 
+                                                            options=[{"label":val, "value":val} \
+                                                                for val in dropdown_data["Streaming TV"]],
+                                                                value="No",
+                                                            clearable=False)
+                                                ]), lg=3, className="bottom16"),
+                                            dbc.Col(html.Div(
+                                                [
+                                                    html.H4("Streaming Movies", className="font-sm"),
+                                                    dcc.Dropdown(id="input-Streaming Movies", 
+                                                            options=[{"label":val, "value":val} \
+                                                                for val in dropdown_data["Streaming Movies"]],
+                                                                value="No",
+                                                            clearable=False)
+                                                ]), lg=3, className="bottom16")
+                                        ]), className="extra-inputs-layout"
+                                    )
                                 ], id="collapse-inputs")
                             ]),
                             ], className="style-input-cards", style={"height":"100%"})
@@ -288,15 +292,6 @@ def generating_dropdowns(dropdown_data):
                                                         className="width-100"
                                                     )
                                         ]), lg=3, className="bottom16"),
-                                    dbc.Col(html.Div(
-                                        [
-                                            html.H4(["Total Charges", html.Span("*", style={"color":"red"})], className="font-sm"),
-                                            dcc.Input(
-                                                        id=f"input-Total Charges", 
-                                                        type="number",
-                                                        className="width-100"
-                                                    )
-                                        ]), lg=3, className="bottom16")
                                 ])
                         ], className="style-input-cards", style={"maxHeight":"156px"})
                     ], lg=6)
@@ -313,7 +308,7 @@ def generating_dropdowns(dropdown_data):
     Input("btn-predict", "n_clicks"),
     State("collapse-inputs", "is_open"),
 )
-def toggle_left(n, btn_pred, is_open):
+def collapse_inputs(n, btn_pred, is_open):
     ctx = dash.callback_context
 
     if not ctx.triggered:
@@ -337,48 +332,89 @@ def toggle_left(n, btn_pred, is_open):
     Output("alert-empty-inputs", "children"),
     Output("alert-empty-inputs", "is_open"),
     Input("btn-predict", 'n_clicks'),
+    Input("btn-load-sample", "n_clicks"),
     [State(f"input-{input}", 'value') \
         for input in project_list \
-            if input not in ["CustomerID", "City", "Churn Value"]],
+            if input not in ["CustomerID", "City", "Churn Value", "Total Charges"]],
     prevent_initial_call=True)
-def getting_input_parameters(btn_clicks, gender, senior_citzen, partner, \
+def getting_input_parameters(btn_predict, btn_load, gender, senior_citzen, partner, \
                              dependents,tenure, phone_service, multiple_lines, internet_service,\
                              online_security, online_backup, device_protection, tech_support, \
                              streaming_tv, streaming_movies, contract, paperless_bill, payment_method, \
-                             monthly_charges, total_charges):
+                             monthly_charges):
 
     all_inputs=["IDdummy", "CityDummy", \
                 gender, senior_citzen, partner, \
                 dependents,tenure, phone_service, multiple_lines, internet_service,\
                 online_security, online_backup, device_protection, tech_support, \
                 streaming_tv, streaming_movies, contract, paperless_bill, payment_method, \
-                monthly_charges, total_charges]
+                monthly_charges]
 
-    if btn_clicks == None:
+
+    ctx = dash.callback_context
+
+    if not ctx.triggered:
         raise PreventUpdate
+    else:
+        button_id = ctx.triggered[0]['prop_id'].split('.')[0]
 
-    elif None in all_inputs:
-
-        user_new_input = create_input_table(all_inputs)
-
-        list_empty=[i for i in user_new_input.columns if user_new_input[i].isnull().any()]
-        
-        string_list=", ".join([val for val in list_empty])
-
-        alert_string="You can't leva empty fields. Please, fill the ", html.Span(string_list, style={"font-weight":"bold"}), " fields before clicking on Predict button again."
-
-        return dash.no_update, alert_string, True
+    if button_id == "btn-load-sample":
+        return None, dash.no_update, False
 
     else: 
+
+        if None in all_inputs:
+
+            user_new_input = create_input_table(all_inputs)
+
+            list_empty=[i for i in user_new_input.columns if user_new_input[i].isnull().any()]
+            
+            string_list=", ".join([val for val in list_empty])
+
+            alert_string="You can't leva empty fields. Please, fill the ", html.Span(string_list, style={"font-weight":"bold"}), " fields before clicking on Predict button again."
+
+            return dash.no_update, alert_string, True
 
         time.sleep(4)
 
         user_new_input = create_input_table(all_inputs)
 
+        user_new_input=data_transformation(user_new_input)
+
         predictions=prediction(user_new_input)
 
-        will_churn="The model prediction is that this customer has a high chance to Churn this time."
-        will_no_churn="The model prediction is that this customer has a low chance to Churn and will not Churn this time."
+        will_churn="The model predicted that this customer will churn."
+        will_no_churn="The model predicted that this customer will not churn."
 
         return  dbc.Alert(f"{will_churn if int(predictions['Label'][0]) == 1 else will_no_churn}", className="alert-card-style"), dash.no_update, False
   
+
+@app.callback(
+    [Output(f"input-{input}", 'value') \
+        for input in list(project_list) \
+            if input not in ["CustomerID", "City", "Churn Value", "Total Charges"]],
+    [Output("input-churn-sample", "children")],
+     Input("btn-load-sample", "n_clicks"), prevent_initial_call=True
+            )
+def loading_value_from_test_data(btn_load):
+
+    ctx = dash.callback_context
+
+    if not ctx.triggered:
+        raise PreventUpdate
+    else:
+        button_id = ctx.triggered[0]['prop_id'].split('.')[0]
+
+    test_df=pd.read_csv("assets/data/telco-test.csv")
+    churn_label=test_df["Churn Value"].values
+    unseen_data=test_df[['CustomerID', 'City', 'Gender', 'Senior Citizen', 'Partner',
+              'Dependents', 'Tenure Months', 'Phone Service', 'Multiple Lines',
+              'Internet Service', 'Online Security', 'Online Backup',
+              'Device Protection', 'Tech Support', 'Streaming TV', 'Streaming Movies',
+              'Contract', 'Paperless Billing', 'Payment Method', 'Monthly Charges']]
+    
+    rand_idx=random.randint(0, len(unseen_data))
+    random_sample_data=unseen_data.iloc[rand_idx].tolist()
+
+    return random_sample_data[2:] + [f"The sample {random_sample_data[0]} loaded - IS A CHURN." if churn_label[rand_idx] == 1 else f"The sample {random_sample_data[0]} loaded - IS NOT A CHURN."]
+
