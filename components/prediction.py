@@ -332,6 +332,7 @@ def toggle_left(n, btn_pred, is_open):
 
 @app.callback(
     Output("prediction-result", "children"),
+    Output("alert-empty-inputs", "children"),
     Output("alert-empty-inputs", "is_open"),
     Input("btn-predict", 'n_clicks'),
     [State(f"input-{input}", 'value') \
@@ -355,7 +356,16 @@ def getting_input_parameters(btn_clicks, gender, senior_citzen, partner, \
         raise PreventUpdate
 
     elif None in all_inputs:
-        return dash.no_update, True
+
+        user_new_input = create_input_table(all_inputs)
+
+        list_empty=[i for i in user_new_input.columns if user_new_input[i].isnull().any()]
+        
+        string_list=", ".join([val for val in list_empty])
+
+        alert_string="You can't leva empty fields. Please, fill the ", html.Span(string_list, style={"font-weight":"bold"}), " fields before clicking on Predict button again."
+
+        return dash.no_update, alert_string, True
 
     else: 
 
@@ -368,5 +378,5 @@ def getting_input_parameters(btn_clicks, gender, senior_citzen, partner, \
         will_churn="The model prediction is that this customer has a high chance to Churn this time."
         will_no_churn="The model prediction is that this customer has a low chance to Churn and will not Churn this time."
 
-        return  dbc.Alert(f"{will_churn if int(predictions['Label'][0]) == 1 else will_no_churn}", className="alert-card-style"), False
+        return  dbc.Alert(f"{will_churn if int(predictions['Label'][0]) == 1 else will_no_churn}", className="alert-card-style"), dash.no_update, False
   
