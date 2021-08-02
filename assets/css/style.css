@@ -38,6 +38,52 @@
 }
 
 
+/* Margin left classes*/
+
+.left4 {
+    margin-left: 4px;
+}
+
+.left8 {
+    margin-left: 8px;
+}
+
+.left16 {
+    margin-left: 16px;
+}
+
+.left32 {
+    margin-left: 32px;
+}
+
+.left64 {
+    margin-left: 64px;
+}
+
+
+/* Margin right classes*/
+
+.right4 {
+    margin-right: 4px;
+}
+
+.right8 {
+    margin-right: 8px;
+}
+
+.right16 {
+    margin-right: 16px;
+}
+
+.right32 {
+    margin-right: 32px;
+}
+
+.right64 {
+    margin-right: 64px;
+}
+
+
 /* Size settings */
 
 

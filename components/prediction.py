@@ -26,18 +26,20 @@ prediction_layout=html.Div(
         [
             html.H1("IBM Customers Churn Prediction", className="text-center bottom32 top16"), 
             html.Div(id="customer-input-list", className="bottom32"),
-            html.Div([html.Button(["Predict"], 
-                                  id="btn-predict", 
-                                  className="buttonStyle bottom16"),
+            html.Div([html.Div([html.Button(["Predict"], 
+                                            id="btn-predict", 
+                                            className="buttonStyle bottom16 right4"),
+                                  html.Button(["Load sample"], 
+                                            id="btn-load", 
+                                            className="buttonStyle bottom16 left4")
+                                  ]),
                       dbc.Alert(
-                            "You can't predict the Churn without all the features filled. Please fill all the input fields before clicking on the Predict button.",
                             id="alert-empty-inputs",
                             is_open=False,
                             duration=5000, color="danger",
-                            className="alert-card-style"
-                        )], 
+                            className="alert-card-style")], 
                     className="text-center bottom16"),
-            html.Div(id="prediction-result", style={"min-height":"250px"})
+            dcc.Loading(html.Div(id="prediction-result", style={"min-height":"250px"}))
         ])
 
 
@@ -113,7 +115,7 @@ def generating_dropdowns(dropdown_data):
                                             html.H4(["Contract", html.Span("*", style={"color":"red"})], className="font-sm"),
                                             dcc.Dropdown(id="input-Contract", 
                                                     options=[{"label": "Monthly" if val == "Month-to-month" else val, "value":val} \
-                                                        for val in dropdown_data["Contract"]],
+                                                        for val in ["Month-to-month", "One Year", "Two Years"]],
                                                         value=None,
                                                         clearable=False,
                                                         placeholder="Monhtly, yearly...")
@@ -369,7 +371,7 @@ def getting_input_parameters(btn_clicks, gender, senior_citzen, partner, \
 
     else: 
 
-        time.sleep(2)
+        time.sleep(4)
 
         user_new_input = create_input_table(all_inputs)
 

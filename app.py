@@ -86,6 +86,8 @@ def getting_data(app_pathname):
     else:
         raise PreventUpdate
 
+
+
 if __name__ == '__main__':
     app.run_server(debug=True, port="8879")
 
