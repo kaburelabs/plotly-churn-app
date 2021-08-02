@@ -1967,3 +1967,246 @@
                 ['trained_model', GaussianNB(var_smoothing=1e-07)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
 2021-08-02 18:27:00,486:INFO:Checking exceptions
 2021-08-02 18:27:00,486:INFO:Preloading libraries
+2021-08-02 18:44:37,748:INFO:Initializing load_model()
+2021-08-02 18:44:37,748:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 18:44:38,972:INFO:Initializing load_model()
+2021-08-02 18:44:38,972:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 18:50:31,001:INFO:Initializing load_model()
+2021-08-02 18:50:31,001:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 18:50:48,032:INFO:Initializing load_model()
+2021-08-02 18:50:48,032:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 18:51:08,229:INFO:Initializing load_model()
+2021-08-02 18:51:08,229:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 18:51:32,449:INFO:Initializing load_model()
+2021-08-02 18:51:32,450:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 18:51:50,262:INFO:Initializing load_model()
+2021-08-02 18:51:50,262:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 18:52:25,904:INFO:Initializing load_model()
+2021-08-02 18:52:25,904:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 18:52:41,841:INFO:Initializing load_model()
+2021-08-02 18:52:41,841:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 18:53:11,937:INFO:Initializing load_model()
+2021-08-02 18:53:11,937:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 18:53:53,812:INFO:Initializing load_model()
+2021-08-02 18:53:53,812:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 18:54:25,455:INFO:Initializing load_model()
+2021-08-02 18:54:25,455:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 18:54:35,656:INFO:Initializing predict_model()
+2021-08-02 18:54:35,656:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
+                                      ml_usecase='classification',
+                                      target='Churn Value')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(r...
+                                                    random_state=1463,
+                                                    subclass='binary',
+                                                    target='Churn Value',
+                                                    top_features_to_pick=0.19999999999999996)),
+                ('fix_multi', 'passthrough'),
+                ('dfs',
+                 DFS_Classic(interactions=['multiply', 'divide'], n_jobs=-1,
+                             random_state=1463, subclass='binary',
+                             target='Churn Value',
+                             top_features_to_pick_percentage=None)),
+                ('pca', 'passthrough'),
+                ['trained_model', GaussianNB(var_smoothing=1e-07)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-08-02 18:54:35,656:INFO:Checking exceptions
+2021-08-02 18:54:35,656:INFO:Preloading libraries
+2021-08-02 18:59:30,106:INFO:Initializing load_model()
+2021-08-02 18:59:30,106:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 18:59:38,355:INFO:Initializing predict_model()
+2021-08-02 18:59:38,355:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
+                                      ml_usecase='classification',
+                                      target='Churn Value')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(r...
+                                                    random_state=1463,
+                                                    subclass='binary',
+                                                    target='Churn Value',
+                                                    top_features_to_pick=0.19999999999999996)),
+                ('fix_multi', 'passthrough'),
+                ('dfs',
+                 DFS_Classic(interactions=['multiply', 'divide'], n_jobs=-1,
+                             random_state=1463, subclass='binary',
+                             target='Churn Value',
+                             top_features_to_pick_percentage=None)),
+                ('pca', 'passthrough'),
+                ['trained_model', GaussianNB(var_smoothing=1e-07)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-08-02 18:59:38,355:INFO:Checking exceptions
+2021-08-02 18:59:38,355:INFO:Preloading libraries
+2021-08-02 18:59:49,126:INFO:Initializing load_model()
+2021-08-02 18:59:49,126:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 19:00:58,915:INFO:Initializing load_model()
+2021-08-02 19:00:58,915:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 19:01:19,091:INFO:Initializing load_model()
+2021-08-02 19:01:19,091:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 19:01:43,199:INFO:Initializing load_model()
+2021-08-02 19:01:43,199:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 19:02:17,798:INFO:Initializing load_model()
+2021-08-02 19:02:17,798:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 19:03:08,788:INFO:Initializing load_model()
+2021-08-02 19:03:08,788:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 19:03:53,613:INFO:Initializing load_model()
+2021-08-02 19:03:53,613:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 19:04:22,013:INFO:Initializing load_model()
+2021-08-02 19:04:22,013:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 19:05:13,948:INFO:Initializing load_model()
+2021-08-02 19:05:13,948:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 19:05:25,711:INFO:Initializing load_model()
+2021-08-02 19:05:25,711:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 19:05:35,999:INFO:Initializing predict_model()
+2021-08-02 19:05:35,999:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
+                                      ml_usecase='classification',
+                                      target='Churn Value')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(r...
+                                                    random_state=1463,
+                                                    subclass='binary',
+                                                    target='Churn Value',
+                                                    top_features_to_pick=0.19999999999999996)),
+                ('fix_multi', 'passthrough'),
+                ('dfs',
+                 DFS_Classic(interactions=['multiply', 'divide'], n_jobs=-1,
+                             random_state=1463, subclass='binary',
+                             target='Churn Value',
+                             top_features_to_pick_percentage=None)),
+                ('pca', 'passthrough'),
+                ['trained_model', GaussianNB(var_smoothing=1e-07)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-08-02 19:05:35,999:INFO:Checking exceptions
+2021-08-02 19:05:35,999:INFO:Preloading libraries
+2021-08-02 19:07:02,674:INFO:Initializing load_model()
+2021-08-02 19:07:02,674:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 19:07:17,423:INFO:Initializing load_model()
+2021-08-02 19:07:17,423:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 19:07:32,377:INFO:Initializing predict_model()
+2021-08-02 19:07:32,377:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
+                                      ml_usecase='classification',
+                                      target='Churn Value')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(r...
+                                                    random_state=1463,
+                                                    subclass='binary',
+                                                    target='Churn Value',
+                                                    top_features_to_pick=0.19999999999999996)),
+                ('fix_multi', 'passthrough'),
+                ('dfs',
+                 DFS_Classic(interactions=['multiply', 'divide'], n_jobs=-1,
+                             random_state=1463, subclass='binary',
+                             target='Churn Value',
+                             top_features_to_pick_percentage=None)),
+                ('pca', 'passthrough'),
+                ['trained_model', GaussianNB(var_smoothing=1e-07)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-08-02 19:07:32,377:INFO:Checking exceptions
+2021-08-02 19:07:32,377:INFO:Preloading libraries
+2021-08-02 19:07:44,589:INFO:Initializing load_model()
+2021-08-02 19:07:44,589:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 19:09:52,243:INFO:Initializing load_model()
+2021-08-02 19:09:52,243:INFO:load_model(model_name=assets/ml_models_binaries/NB-final-baseline, platform=None, authentication=None, verbose=True)
+2021-08-02 19:10:04,909:INFO:Initializing predict_model()
+2021-08-02 19:10:04,909:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
+                                      ml_usecase='classification',
+                                      target='Churn Value')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(r...
+                                                    random_state=1463,
+                                                    subclass='binary',
+                                                    target='Churn Value',
+                                                    top_features_to_pick=0.19999999999999996)),
+                ('fix_multi', 'passthrough'),
+                ('dfs',
+                 DFS_Classic(interactions=['multiply', 'divide'], n_jobs=-1,
+                             random_state=1463, subclass='binary',
+                             target='Churn Value',
+                             top_features_to_pick_percentage=None)),
+                ('pca', 'passthrough'),
+                ['trained_model', GaussianNB(var_smoothing=1e-07)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-08-02 19:10:04,909:INFO:Checking exceptions
+2021-08-02 19:10:04,909:INFO:Preloading libraries
+2021-08-02 19:10:14,190:INFO:Initializing predict_model()
+2021-08-02 19:10:14,190:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
+                                      ml_usecase='classification',
+                                      target='Churn Value')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(r...
+                                                    random_state=1463,
+                                                    subclass='binary',
+                                                    target='Churn Value',
+                                                    top_features_to_pick=0.19999999999999996)),
+                ('fix_multi', 'passthrough'),
+                ('dfs',
+                 DFS_Classic(interactions=['multiply', 'divide'], n_jobs=-1,
+                             random_state=1463, subclass='binary',
+                             target='Churn Value',
+                             top_features_to_pick_percentage=None)),
+                ('pca', 'passthrough'),
+                ['trained_model', GaussianNB(var_smoothing=1e-07)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-08-02 19:10:14,190:INFO:Checking exceptions
+2021-08-02 19:10:14,190:INFO:Preloading libraries
+2021-08-02 19:10:25,317:INFO:Initializing predict_model()
+2021-08-02 19:10:25,317:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(features_todrop=['CustomerID', 'City'],
+                                      ml_usecase='classification',
+                                      target='Churn Value')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(r...
+                                                    random_state=1463,
+                                                    subclass='binary',
+                                                    target='Churn Value',
+                                                    top_features_to_pick=0.19999999999999996)),
+                ('fix_multi', 'passthrough'),
+                ('dfs',
+                 DFS_Classic(interactions=['multiply', 'divide'], n_jobs=-1,
+                             random_state=1463, subclass='binary',
+                             target='Churn Value',
+                             top_features_to_pick_percentage=None)),
+                ('pca', 'passthrough'),
+                ['trained_model', GaussianNB(var_smoothing=1e-07)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-08-02 19:10:25,317:INFO:Checking exceptions
+2021-08-02 19:10:25,317:INFO:Preloading libraries

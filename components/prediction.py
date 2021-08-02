@@ -35,6 +35,7 @@ prediction_layout=html.Div(
                                             className="buttonStyle bottom16 left4"),
 
                                   ]),
+                        dcc.Store("loaded-sampled"),
                         html.Div(id="input-churn-sample", className="red font-xs"),
                         dbc.Alert(
                             id="alert-empty-inputs",
@@ -350,7 +351,6 @@ def getting_input_parameters(btn_predict, btn_load, gender, senior_citzen, partn
                 streaming_tv, streaming_movies, contract, paperless_bill, payment_method, \
                 monthly_charges]
 
-
     ctx = dash.callback_context
 
     if not ctx.triggered:
@@ -387,13 +387,13 @@ def getting_input_parameters(btn_predict, btn_load, gender, senior_citzen, partn
         will_no_churn="The model predicted that this customer will not churn."
 
         return  dbc.Alert(f"{will_churn if int(predictions['Label'][0]) == 1 else will_no_churn}", className="alert-card-style"), dash.no_update, False
-  
+
 
 @app.callback(
     [Output(f"input-{input}", 'value') \
         for input in list(project_list) \
             if input not in ["CustomerID", "City", "Churn Value", "Total Charges"]],
-    [Output("input-churn-sample", "children")],
+    [Output("loaded-sampled", "data")],
      Input("btn-load-sample", "n_clicks"), prevent_initial_call=True
             )
 def loading_value_from_test_data(btn_load):
@@ -416,5 +416,41 @@ def loading_value_from_test_data(btn_load):
     rand_idx=random.randint(0, len(unseen_data))
     random_sample_data=unseen_data.iloc[rand_idx].tolist()
 
-    return random_sample_data[2:] + [f"The sample {random_sample_data[0]} loaded - IS A CHURN." if churn_label[rand_idx] == 1 else f"The sample {random_sample_data[0]} loaded - IS NOT A CHURN."]
+    return random_sample_data[2:] + [random_sample_data+[churn_label[rand_idx]]]
 
+
+@app.callback(
+    Output("input-churn-sample", "children"),
+    [Input("loaded-sampled", "data")],
+    [Input(f"input-{input}", 'value') \
+        for input in project_list \
+            if input not in ["CustomerID", "City", "Churn Value", "Total Charges"]],
+    
+    prevent_initial_call=True
+)
+def loaded_and_inputs(loaded_sample, gender, senior_citzen, partner, \
+                             dependents,tenure, phone_service, multiple_lines, internet_service,\
+                             online_security, online_backup, device_protection, tech_support, \
+                             streaming_tv, streaming_movies, contract, paperless_bill, payment_method, \
+                             monthly_charges):
+
+    features_list=[gender, senior_citzen, partner, \
+                             dependents,tenure, phone_service, multiple_lines, internet_service,\
+                             online_security, online_backup, device_protection, tech_support, \
+                             streaming_tv, streaming_movies, contract, paperless_bill, payment_method, \
+                             monthly_charges]
+
+    if None in features_list:
+        raise PreventUpdate
+
+    elif loaded_sample is None:
+        raise PreventUpdate
+
+    elif loaded_sample[2:-1] != features_list:
+        return None
+
+    else:
+
+        text_loaded=f"The loaded sample IS A CHURN - ID sample {loaded_sample[0]}" if loaded_sample[-1] == 0 else f"The loaded sample IS NOT A CHURN - ID sample {loaded_sample[0]}"
+
+        return text_loaded
