@@ -26,12 +26,14 @@ prediction_layout=html.Div(
         [
             html.H1("IBM Customers Churn Prediction", className="text-center bottom32 top16"), 
             html.Div(id="customer-input-list", className="bottom32"),
-            html.Div([html.Button(["Predict"], id="btn-predict", className="buttonStyle bottom16"),
+            html.Div([html.Button(["Predict"], 
+                                  id="btn-predict", 
+                                  className="buttonStyle bottom16"),
                       dbc.Alert(
                             "You can't predict the Churn without all the features filled. Please fill all the input fields before clicking on the Predict button.",
                             id="alert-empty-inputs",
                             is_open=False,
-                            duration=4000, color="danger",
+                            duration=5000, color="danger",
                             className="alert-card-style"
                         )], 
                     className="text-center bottom16"),
@@ -73,7 +75,8 @@ def generating_dropdowns(dropdown_data):
                                         dcc.Dropdown(id="input-Partner", 
                                                 options=[{"label":val, "value":val} \
                                                     for val in dropdown_data["Partner"]],
-                                                    value="No")
+                                                    value="No",
+                                                    clearable=False)
                                     ]), lg=3, className="bottom16"),
                                 dbc.Col(html.Div(
                                     [
@@ -81,7 +84,8 @@ def generating_dropdowns(dropdown_data):
                                         dcc.Dropdown(id="input-Dependents", 
                                                 options=[{"label":val, "value":val} \
                                                     for val in dropdown_data["Dependents"]],
-                                                    value=None)
+                                                    value=None,
+                                                    clearable=False)
                                     ]), lg=3, className="bottom16"),
                                 dbc.Col(html.Div(
                                     [
@@ -89,7 +93,8 @@ def generating_dropdowns(dropdown_data):
                                         dcc.Dropdown(id="input-Senior Citizen", 
                                                     options=[{"label":val, "value":val} \
                                                         for val in dropdown_data["Senior Citizen"]], 
-                                                    value="No")
+                                                    value="No",
+                                                    clearable=False)
                                     ]), lg=3, className="bottom16")])
                             ], className="style-input-cards")
                     ], lg=6),
@@ -109,7 +114,9 @@ def generating_dropdowns(dropdown_data):
                                             dcc.Dropdown(id="input-Contract", 
                                                     options=[{"label": "Monthly" if val == "Month-to-month" else val, "value":val} \
                                                         for val in dropdown_data["Contract"]],
-                                                        value=None)
+                                                        value=None,
+                                                        clearable=False,
+                                                        placeholder="Monhtly, yearly...")
                                         ]), lg=4, className="bottom16"),
                                     dbc.Col(html.Div(
                                         [
@@ -117,7 +124,8 @@ def generating_dropdowns(dropdown_data):
                                             dcc.Dropdown(id="input-Paperless Billing", 
                                                     options=[{"label":"Paperless" if val == "Yes" else "Paper", "value":val} \
                                                         for val in dropdown_data["Paperless Billing"]],
-                                                        value="Yes")
+                                                        value="Yes",
+                                                        clearable=False)
                                         ]), lg=4, className="bottom16"),
                                     dbc.Col(html.Div(
                                         [
@@ -125,7 +133,8 @@ def generating_dropdowns(dropdown_data):
                                             dcc.Dropdown(id="input-Payment Method", 
                                                     options=[{"label":val.replace("(automatic)", ""), "value":val} \
                                                         for val in dropdown_data["Payment Method"]],
-                                                        value="Bank transfer (automatic)")
+                                                        value="Bank transfer (automatic)",
+                                                        clearable=False)
                                         ]), lg=4, className="bottom16")
                                 ]
                             ))
@@ -155,7 +164,8 @@ def generating_dropdowns(dropdown_data):
                                             dcc.Dropdown(id="input-Phone Service", 
                                                     options=[{"label":val, "value":val} \
                                                         for val in dropdown_data["Phone Service"]],
-                                                        value="Yes")
+                                                        value="Yes",
+                                                        clearable=False)
                                         ]), lg=4, className="bottom16"),
                                     dbc.Col(html.Div(
                                         [
@@ -163,7 +173,8 @@ def generating_dropdowns(dropdown_data):
                                             dcc.Dropdown(id="input-Internet Service", 
                                                         options=[{"label":val, "value":val} \
                                                             for val in dropdown_data["Internet Service"]],
-                                                        value="Fiber optic")
+                                                        value="Fiber optic",
+                                                        clearable=False)
                                         ]), lg=4, className="bottom16"),
                                     dbc.Col(html.Div(
                                         [
@@ -185,7 +196,8 @@ def generating_dropdowns(dropdown_data):
                                                 dcc.Dropdown(id="input-Multiple Lines", 
                                                         options=[{"label":val, "value":val} \
                                                             for val in dropdown_data["Multiple Lines"]],
-                                                            value="No")
+                                                            value="No",
+                                                        clearable=False)
                                             ]), lg=3, className="bottom16"),
                                         dbc.Col(html.Div(
                                             [
@@ -193,7 +205,8 @@ def generating_dropdowns(dropdown_data):
                                                 dcc.Dropdown(id="input-Online Security", 
                                                         options=[{"label":val, "value":val} \
                                                             for val in dropdown_data["Online Security"]],
-                                                            value="No")
+                                                            value="No",
+                                                        clearable=False)
                                             ]), lg=3, className="bottom16"),
                                         dbc.Col(html.Div(
                                             [
@@ -201,7 +214,8 @@ def generating_dropdowns(dropdown_data):
                                                 dcc.Dropdown(id="input-Online Backup", 
                                                         options=[{"label":val, "value":val} \
                                                             for val in dropdown_data["Online Backup"]],
-                                                            value="No")
+                                                            value="No",
+                                                        clearable=False)
                                             ]), lg=3, className="bottom16"),
                                         dbc.Col(html.Div(
                                             [
@@ -209,7 +223,8 @@ def generating_dropdowns(dropdown_data):
                                                 dcc.Dropdown(id="input-Device Protection", 
                                                         options=[{"label":val, "value":val} \
                                                             for val in dropdown_data["Device Protection"]],
-                                                            value="No")
+                                                            value="No",
+                                                        clearable=False)
                                             ]), lg=3, className="bottom16"),
                                         dbc.Col(html.Div(
                                             [
@@ -217,7 +232,8 @@ def generating_dropdowns(dropdown_data):
                                                 dcc.Dropdown(id="input-Tech Support", 
                                                         options=[{"label":val, "value":val} \
                                                             for val in dropdown_data["Tech Support"]],
-                                                            value="No")
+                                                            value="No",
+                                                        clearable=False)
                                             ]), lg=3, className="bottom16"),
                                         dbc.Col(html.Div(
                                             [
@@ -225,7 +241,8 @@ def generating_dropdowns(dropdown_data):
                                                 dcc.Dropdown(id="input-Streaming TV", 
                                                         options=[{"label":val, "value":val} \
                                                             for val in dropdown_data["Streaming TV"]],
-                                                            value="No")
+                                                            value="No",
+                                                        clearable=False)
                                             ]), lg=3, className="bottom16"),
                                         dbc.Col(html.Div(
                                             [
@@ -233,7 +250,8 @@ def generating_dropdowns(dropdown_data):
                                                 dcc.Dropdown(id="input-Streaming Movies", 
                                                         options=[{"label":val, "value":val} \
                                                             for val in dropdown_data["Streaming Movies"]],
-                                                            value="No")
+                                                            value="No",
+                                                        clearable=False)
                                             ]), lg=3, className="bottom16")
                                     ])
                                 ], id="collapse-inputs")
@@ -252,7 +270,7 @@ def generating_dropdowns(dropdown_data):
                                 [
                                     dbc.Col(html.Div(
                                         [
-                                            html.H4("Tenure Months", className="font-sm"),
+                                            html.H4(["Tenure Months", html.Span("*", style={"color":"red"})], className="font-sm"),
                                             dcc.Input(
                                                         id=f"input-Tenure Months", 
                                                         type="number",
@@ -261,7 +279,7 @@ def generating_dropdowns(dropdown_data):
                                         ]), lg=3, className="bottom16"),
                                     dbc.Col(html.Div(
                                         [
-                                            html.H4("Monthly Charges", className="font-sm"),
+                                            html.H4(["Monthly Charges", html.Span("*", style={"color":"red"})], className="font-sm"),
                                             dcc.Input(
                                                         id=f"input-Monthly Charges", 
                                                         type="number",
@@ -270,7 +288,7 @@ def generating_dropdowns(dropdown_data):
                                         ]), lg=3, className="bottom16"),
                                     dbc.Col(html.Div(
                                         [
-                                            html.H4("Total Charges", className="font-sm"),
+                                            html.H4(["Total Charges", html.Span("*", style={"color":"red"})], className="font-sm"),
                                             dcc.Input(
                                                         id=f"input-Total Charges", 
                                                         type="number",
