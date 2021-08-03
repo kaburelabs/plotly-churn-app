@@ -11,12 +11,13 @@ import pandas as pd
 import json
 from dash.exceptions import PreventUpdate
 import time 
+import numpy as np
 
 from components.utils.generate_dropdowns import input_components, load_input_dict
 
 from components.utils.load_data import create_input_table, data_transformation
 
-from components.utils.load_model import prediction
+from components.utils.load_model import prediction, test_score_report
 
 import random 
 
@@ -31,12 +32,23 @@ prediction_layout=html.Div(
                                             id="btn-predict", 
                                             className="buttonStyle bottom16 right4"),
                                   html.Button(["Load sample"], 
-                                            id="btn-load-sample", 
+                                            id="btn-collapse-load-samples", 
                                             className="buttonStyle bottom16 left4"),
-
+                                     dbc.Collapse(
+                                        [html.Div([
+                                            html.Button(["Load one sample"], 
+                                                id="btn-load-one", 
+                                                className="buttonStyle bottom16 left4"),
+                                            html.Button(["Load full dataset"], 
+                                                id="btn-load-full", 
+                                                className="buttonStyle bottom16 left4")
+                                        ])],
+                                        id="collapse",
+                                        is_open=False,
+                                        ),
                                   ]),
                         dcc.Store("loaded-sampled"),
-                        html.Div(id="input-churn-sample", className="red font-xs"),
+                        html.Div(id="input-churn-sample", className="red font-sm"),
                         dbc.Alert(
                             id="alert-empty-inputs",
                             is_open=False,
@@ -46,6 +58,46 @@ prediction_layout=html.Div(
             dcc.Loading(html.Div(id="prediction-result", style={"min-height":"250px"}))
         ])
 
+
+@app.callback(
+    Output("collapse", "is_open"),
+    [Input("btn-collapse-load-samples", "n_clicks"),
+     Input("btn-load-one", "n_clicks"),
+     Input("btn-predict", "n_clicks"),
+     Input("btn-load-full", "n_clicks")],
+    [State("collapse", "is_open")],
+)
+def toggle_collapse(n_collapse, loaded, predict, load_full, is_open):
+
+    ctx = dash.callback_context
+
+    if not ctx.triggered:
+        raise PreventUpdate
+    else:
+        button_id = ctx.triggered[0]['prop_id'].split('.')[0]
+    print(button_id)
+    if button_id == "btn-collapse-load-samples":
+        return not is_open
+
+    elif button_id == "btn-predict":
+        if is_open==True:
+            return False
+        else: 
+            return dash.no_update
+
+    elif button_id == "btn-load-one":
+        if is_open==True:
+            return False
+        else: 
+            return dash.no_update
+
+    elif button_id == "btn-load-full":
+        if is_open==True:
+            return False
+        else: 
+            return dash.no_update
+
+    return is_open
 
 
 @app.callback(
@@ -60,8 +112,10 @@ def generating_dropdowns(dropdown_data):
                 [
                     dbc.Col([
                         html.Div([
-                            html.H3(["Demographic Features", html.Span(html.I(className="fas fa-question-circle font-sm", id="tooltip-demographic"), 
-                                            style={"marginLeft":"5px"})], className="bottom16"),
+                            html.H3(["Demographic Features", 
+                                     html.Span(html.I(className="fas fa-question-circle font-sm", 
+                                                      id="tooltip-demographic"), 
+                                            style={"marginLeft":"5px"})], className="bottom16 font-lg"),
                             dbc.Tooltip(
                                 "Explanation about Demographic features.",
                                 target="tooltip-demographic",
@@ -106,7 +160,7 @@ def generating_dropdowns(dropdown_data):
                     dbc.Col([
                         html.Div([
                             html.H3(["Contract settings", html.Span(html.I(className="fas fa-question-circle font-sm", id="tooltip-contract"), 
-                                            style={"marginLeft":"5px"})], className="bottom16"),
+                                            style={"marginLeft":"5px"})], className="bottom16 font-lg"),
                             dbc.Tooltip(
                                 "Contract Features & billing options.",
                                 target="tooltip-contract",
@@ -156,7 +210,7 @@ def generating_dropdowns(dropdown_data):
                     dbc.Col([
                         html.Div([
                             html.H3(["Service Features", html.Span(html.I(className="fas fa-question-circle font-sm", id="tooltip-services"), 
-                                            style={"marginLeft":"5px"})], className="bottom16"),
+                                            style={"marginLeft":"5px"})], className="bottom16 font-lg"),
                             dbc.Tooltip(
                                 "Explanation about the services.",
                                 target="tooltip-services",
@@ -268,7 +322,7 @@ def generating_dropdowns(dropdown_data):
                     dbc.Col([
                         html.Div([
                             html.H3(["Tenure & Charges", html.Span(html.I(className="fas fa-question-circle font-sm", id="tooltip-numericals"), 
-                                            style={"marginLeft":"5px"})], className="bottom16"),
+                                            style={"marginLeft":"5px"})], className="bottom16 font-lg"),
                             dbc.Tooltip(
                                 "Tenure in months and Billing Charges.",
                                 target="tooltip-numericals",
@@ -333,18 +387,19 @@ def collapse_inputs(n, btn_pred, is_open):
     Output("alert-empty-inputs", "children"),
     Output("alert-empty-inputs", "is_open"),
     Input("btn-predict", 'n_clicks'),
-    Input("btn-load-sample", "n_clicks"),
+    Input("btn-load-one", "n_clicks"),
+    Input("btn-load-full", "n_clicks"),
     [State(f"input-{input}", 'value') \
         for input in project_list \
             if input not in ["CustomerID", "City", "Churn Value", "Total Charges"]],
     prevent_initial_call=True)
-def getting_input_parameters(btn_predict, btn_load, gender, senior_citzen, partner, \
+def getting_input_parameters(btn_predict, btn_load_one, btn_load_all, gender, senior_citzen, partner, \
                              dependents,tenure, phone_service, multiple_lines, internet_service,\
                              online_security, online_backup, device_protection, tech_support, \
                              streaming_tv, streaming_movies, contract, paperless_bill, payment_method, \
                              monthly_charges):
 
-    all_inputs=["IDdummy", "CityDummy", \
+    all_inputs=["IDdummy", \
                 gender, senior_citzen, partner, \
                 dependents,tenure, phone_service, multiple_lines, internet_service,\
                 online_security, online_backup, device_protection, tech_support, \
@@ -358,8 +413,27 @@ def getting_input_parameters(btn_predict, btn_load, gender, senior_citzen, partn
     else:
         button_id = ctx.triggered[0]['prop_id'].split('.')[0]
 
-    if button_id == "btn-load-sample":
+    if button_id == "btn-load-one":
         return None, dash.no_update, False
+
+    if button_id == "btn-load-full":
+        
+        time.sleep(5)
+
+        test_df = pd.read_csv("assets/data/telco-test.csv")
+        churn_vals=test_df["Churn Value"].copy()
+        test_df = data_transformation(test_df)  
+
+        predict_unseen = prediction(test_df)
+        test_df["Churn Value"]=churn_vals
+
+        score_unseen = test_score_report(test_df, predict_unseen)
+
+        dash_result_component = html.Div([
+                    f"The profit generated by the model in a base of {test_df.shape[0]} customers is ${score_unseen['Profit'].values[0]:,}. With a recall of {score_unseen['Recall'].values[0]} that means that the model predicted correctly {len(np.where((test_df['Churn Value'] == 1) & (predict_unseen['Label'] == 1))[0])} over {len(np.where((test_df['Churn Value'] == 1))[0])} customer who left the company services."
+                ], className="load-full-layout font-md"
+            )
+        return dash_result_component, dash.no_update, False
 
     else: 
 
@@ -394,7 +468,7 @@ def getting_input_parameters(btn_predict, btn_load, gender, senior_citzen, partn
         for input in list(project_list) \
             if input not in ["CustomerID", "City", "Churn Value", "Total Charges"]],
     [Output("loaded-sampled", "data")],
-     Input("btn-load-sample", "n_clicks"), prevent_initial_call=True
+     Input("btn-load-one", "n_clicks"), prevent_initial_call=True
             )
 def loading_value_from_test_data(btn_load):
 
