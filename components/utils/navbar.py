@@ -7,6 +7,7 @@ PLOTLY_LOGO = "https://images.plot.ly/logo/new-branding/plotly-logomark.png"
 search_bar = dbc.Row(
     [
         dbc.Col(
+            
             width="auto",
         ),
     ],

@@ -2,6 +2,7 @@ from pycaret.classification import *
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import accuracy_score, roc_auc_score, precision_score, \
                                 recall_score, f1_score, confusion_matrix
+
 import numpy as np
 
 # model = load_model('assets/ml_models_binaries/NB-final-baseline')

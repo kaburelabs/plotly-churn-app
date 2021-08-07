@@ -157,6 +157,24 @@
     height: 50px;
     border: none;
     background-color: cadetblue;
+    border-radius: 4px;
+}
+
+
+.hidden-buttons {
+    max-width: 350px;
+    margin: 0 auto;
+    background: #e8ecef;
+    padding: 16px;
+}
+
+.buttonStyle-internal {
+    width: 150px;
+    height: 45px;
+    border: none;
+    background-color: #5f9e9f;
+    color:black;
+    border-radius: 8px;
 }
 
 
@@ -165,4 +183,13 @@
     padding: 16px;
     border-radius: 8px;
     height: 100%;
+}
+
+
+.styleChurnExplanation {
+    max-width: 600px;
+    margin: 0 auto 32px;
+    background: #f0f0f5;
+    padding: 16px;
+    border-radius: 8px;
 }
