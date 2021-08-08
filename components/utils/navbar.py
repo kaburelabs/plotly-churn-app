@@ -1,13 +1,16 @@
 import dash_bootstrap_components as dbc
 import dash_html_components as html
+import dash_core_components as dcc
 from dash.dependencies import Input, Output, State
 
 PLOTLY_LOGO = "https://images.plot.ly/logo/new-branding/plotly-logomark.png"
 
-search_bar = dbc.Row(
+options_navbar = dbc.Row(
     [
-        dbc.Col(
-            
+        dbc.Col([
+            dcc.Link("Prediction", href="/predictions", className="right8 linkBorder"),
+            dcc.Link("Xplanable AI", href="/explanable")
+            ],
             width="auto",
         ),
     ],
@@ -32,7 +35,7 @@ navbar = dbc.Navbar(
         ),
         dbc.NavbarToggler(id="navbar-toggler", n_clicks=0),
         dbc.Collapse(
-            search_bar, id="navbar-collapse", navbar=True, is_open=False
+            options_navbar, id="navbar-collapse", navbar=True, is_open=False
         ),
     ],
     color="dark",

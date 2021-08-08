@@ -32,10 +32,31 @@ prediction_layout=html.Div(
                                             style={"marginLeft":"5px", "cursor":"pointer"})],
                     className="text-center bottom32 top16"), 
             dbc.Tooltip(["Click here to get informations about what is churn prediction and the evaluation metric."], target="tooltip-churn-info"),
+            # dbc.Collapse(
+            #     [html.Div([
+            #             html.Div([
+            #                 html.H3("What Is Churn Prediction?", className="font-md bold"),
+            #                 html.Div([html.B("Churn predicition")," means detecting which customers are likely to cancel a subscription to a service based on how they use the service. It is a critical prediction for many businesses because acquiring new clients often costs more than retaining existing ones. Once you can identify those customers that are at risk of cancelling, you should know exactly what marketing action to take for each individual customer to maximise the chances that the customer will remain."], className="font-sm bottom16"),
+            #             ]),
+            #             html.Div([html.Div("KEY TAKEAWAYS", className="bold font-md bottom8"),
+            #                       html.Ul([
+            #                           html.Li("To this solution we are considering the metric 'PROFIT' to detect the best model.", className="bottom8"),
+            #                           html.Li(["To calculate the PROFIT metric it is considering a cost of ", 
+            #                                    html.B("$1000")," to each customer predicted as CHURN and an earn ", 
+            #                                    html.B("$5,000")," in CLTV for each customer correctly predicted."], className="bottom8"),
+            #                           html.Li(["Model evaluation metric formula: ", html.Br(), html.B("(TRUE_POSITIVE x $5000) - ((TRUE_POSITIVE+FALSE_POSITIVE) x $1000)"), ], className="bottom8"),
+            #                           html.Li("The algorithm choose was Naive Bayes", className="bottom8")
+            #                       ], className="font-sm")])
+            #         ], className="styleChurnExplanation")
+            #     ],
+            #     id="collapse-info-churn",
+            #     is_open=False),
             dbc.Collapse(
                 [html.Div([
-                        html.H3("What Is Churn Prediction?", className="font-md bold"),
-                        html.Div([html.B("Churn predicition")," means detecting which customers are likely to cancel a subscription to a service based on how they use the service. It is a critical prediction for many businesses because acquiring new clients often costs more than retaining existing ones. Once you can identify those customers that are at risk of cancelling, you should know exactly what marketing action to take for each individual customer to maximise the chances that the customer will remain."], className="font-sm bottom16"),
+                        html.Div([
+                            html.H3("What Is Churn Prediction?", className="font-md bold"),
+                            html.Div([html.B("Churn predicition")," means detecting which customers are likely to cancel a subscription to a service based on how they use the service. It is a critical prediction for many businesses because acquiring new clients often costs more than retaining existing ones. Once you can identify those customers that are at risk of cancelling, you should know exactly what marketing action to take for each individual customer to maximise the chances that the customer will remain."], className="font-sm bottom16"),
+                        ], className="card-left-info"),
                         html.Div([html.Div("KEY TAKEAWAYS", className="bold font-md bottom8"),
                                   html.Ul([
                                       html.Li("To this solution we are considering the metric 'PROFIT' to detect the best model.", className="bottom8"),
@@ -44,12 +65,13 @@ prediction_layout=html.Div(
                                                html.B("$5,000")," in CLTV for each customer correctly predicted."], className="bottom8"),
                                       html.Li(["Model evaluation metric formula: ", html.Br(), html.B("(TRUE_POSITIVE x $5000) - ((TRUE_POSITIVE+FALSE_POSITIVE) x $1000)"), ], className="bottom8"),
                                       html.Li("The algorithm choose was Naive Bayes", className="bottom8")
-                                  ], className="font-sm")])
+                                  ], className="font-sm")], className="card-right-info")
                     ], className="styleChurnExplanation")
                 ],
                 id="collapse-info-churn",
                 is_open=False),
             html.Div(id="customer-input-list", className="bottom32"),
+            html.Div(id="input-churn-sample", className="white font-sm bottom16"),
             html.Div([html.Div([html.Button(["Predict"], 
                                             id="btn-predict", 
                                             className="buttonStyle right4"),
@@ -70,7 +92,6 @@ prediction_layout=html.Div(
                                         ),
                                   ], className="bottom16"),
                         dcc.Store("loaded-sampled"),
-                        html.Div(id="input-churn-sample", className="red font-sm"),
                         dbc.Alert(
                             id="alert-empty-inputs",
                             is_open=False,
@@ -454,6 +475,7 @@ def getting_input_parameters(btn_predict, btn_load_one, btn_load_all, gender, se
                     f"The potential profit generated by the model in a base of ", html.B(f"{test_df.shape[0]}")," customers is ", html.B(f"${score_unseen['Profit'].values[0]:,}"), ". With a recall of ", html.B(f"{round(score_unseen['Recall'].values[0],4)*100}%")," that means that the model predicted correctly ", html.B(f"{len(np.where((test_df['Churn Value'] == 1) & (predict_unseen['Label'] == 1))[0])}"), " over ", html.B(f"{len(np.where((test_df['Churn Value'] == 1))[0])}"), " customer who left the company services."
                 ], className="load-full-layout font-md"
             )
+
         return dash_result_component, dash.no_update, False
 
     else: 
@@ -547,7 +569,7 @@ def loaded_and_inputs(loaded_sample, gender, senior_citzen, partner, \
     else:
         text_loaded=f"The loaded sample IS A CHURN - ID sample {loaded_sample[0]}" if loaded_sample[-1] == 1 else f"The loaded sample IS NOT A CHURN - ID sample {loaded_sample[0]}"
 
-        return text_loaded
+        return html.Div(html.Div(text_loaded, className="white font-sm"), className="backgroundLoaded")
 
 
 @app.callback(

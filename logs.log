@@ -4551,3 +4551,599 @@
                 ['trained_model', GaussianNB(var_smoothing=0.1)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
 2021-08-07 19:02:15,096:INFO:Checking exceptions
 2021-08-07 19:02:15,097:INFO:Preloading libraries
+2021-08-07 20:51:29,028:INFO:Initializing load_model()
+2021-08-07 20:51:29,028:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-07 20:51:30,282:INFO:Initializing load_model()
+2021-08-07 20:51:30,282:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-07 20:52:30,494:INFO:Initializing load_model()
+2021-08-07 20:52:30,494:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-07 20:52:42,594:INFO:Initializing load_model()
+2021-08-07 20:52:42,594:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-07 20:52:43,814:INFO:Initializing load_model()
+2021-08-07 20:52:43,814:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-07 21:00:05,295:INFO:Initializing load_model()
+2021-08-07 21:00:05,295:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-07 21:01:00,419:INFO:Initializing predict_model()
+2021-08-07 21:01:00,419:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(features_todrop=['CustomerID'],
+                                      ml_usecase='classification',
+                                      target='Churn Value')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacem...
+                ('fix_perfect', Remove_100(target='Churn Value')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select',
+                 Advanced_Feature_Selection_Classic(n_jobs=-1,
+                                                    random_state=7148,
+                                                    subclass='binary',
+                                                    target='Churn Value',
+                                                    top_features_to_pick=0.19999999999999996)),
+                ('fix_multi', 'passthrough'), ('dfs', 'passthrough'),
+                ('pca', 'passthrough'),
+                ['trained_model', GaussianNB(var_smoothing=0.1)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-08-07 21:01:00,419:INFO:Checking exceptions
+2021-08-07 21:01:00,419:INFO:Preloading libraries
+2021-08-07 21:01:08,858:INFO:Initializing predict_model()
+2021-08-07 21:01:08,858:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(features_todrop=['CustomerID'],
+                                      ml_usecase='classification',
+                                      target='Churn Value')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacem...
+                ('fix_perfect', Remove_100(target='Churn Value')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select',
+                 Advanced_Feature_Selection_Classic(n_jobs=-1,
+                                                    random_state=7148,
+                                                    subclass='binary',
+                                                    target='Churn Value',
+                                                    top_features_to_pick=0.19999999999999996)),
+                ('fix_multi', 'passthrough'), ('dfs', 'passthrough'),
+                ('pca', 'passthrough'),
+                ['trained_model', GaussianNB(var_smoothing=0.1)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-08-07 21:01:08,858:INFO:Checking exceptions
+2021-08-07 21:01:08,858:INFO:Preloading libraries
+2021-08-07 21:01:17,764:INFO:Initializing predict_model()
+2021-08-07 21:01:17,764:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(features_todrop=['CustomerID'],
+                                      ml_usecase='classification',
+                                      target='Churn Value')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacem...
+                ('fix_perfect', Remove_100(target='Churn Value')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select',
+                 Advanced_Feature_Selection_Classic(n_jobs=-1,
+                                                    random_state=7148,
+                                                    subclass='binary',
+                                                    target='Churn Value',
+                                                    top_features_to_pick=0.19999999999999996)),
+                ('fix_multi', 'passthrough'), ('dfs', 'passthrough'),
+                ('pca', 'passthrough'),
+                ['trained_model', GaussianNB(var_smoothing=0.1)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-08-07 21:01:17,764:INFO:Checking exceptions
+2021-08-07 21:01:17,764:INFO:Preloading libraries
+2021-08-07 21:01:25,630:INFO:Initializing predict_model()
+2021-08-07 21:01:25,630:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(features_todrop=['CustomerID'],
+                                      ml_usecase='classification',
+                                      target='Churn Value')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacem...
+                ('fix_perfect', Remove_100(target='Churn Value')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select',
+                 Advanced_Feature_Selection_Classic(n_jobs=-1,
+                                                    random_state=7148,
+                                                    subclass='binary',
+                                                    target='Churn Value',
+                                                    top_features_to_pick=0.19999999999999996)),
+                ('fix_multi', 'passthrough'), ('dfs', 'passthrough'),
+                ('pca', 'passthrough'),
+                ['trained_model', GaussianNB(var_smoothing=0.1)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-08-07 21:01:25,630:INFO:Checking exceptions
+2021-08-07 21:01:25,630:INFO:Preloading libraries
+2021-08-07 21:01:34,069:INFO:Initializing predict_model()
+2021-08-07 21:01:34,070:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(features_todrop=['CustomerID'],
+                                      ml_usecase='classification',
+                                      target='Churn Value')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacem...
+                ('fix_perfect', Remove_100(target='Churn Value')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select',
+                 Advanced_Feature_Selection_Classic(n_jobs=-1,
+                                                    random_state=7148,
+                                                    subclass='binary',
+                                                    target='Churn Value',
+                                                    top_features_to_pick=0.19999999999999996)),
+                ('fix_multi', 'passthrough'), ('dfs', 'passthrough'),
+                ('pca', 'passthrough'),
+                ['trained_model', GaussianNB(var_smoothing=0.1)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-08-07 21:01:34,070:INFO:Checking exceptions
+2021-08-07 21:01:34,070:INFO:Preloading libraries
+2021-08-07 21:01:45,821:INFO:Initializing predict_model()
+2021-08-07 21:01:45,821:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(features_todrop=['CustomerID'],
+                                      ml_usecase='classification',
+                                      target='Churn Value')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacem...
+                ('fix_perfect', Remove_100(target='Churn Value')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select',
+                 Advanced_Feature_Selection_Classic(n_jobs=-1,
+                                                    random_state=7148,
+                                                    subclass='binary',
+                                                    target='Churn Value',
+                                                    top_features_to_pick=0.19999999999999996)),
+                ('fix_multi', 'passthrough'), ('dfs', 'passthrough'),
+                ('pca', 'passthrough'),
+                ['trained_model', GaussianNB(var_smoothing=0.1)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-08-07 21:01:45,821:INFO:Checking exceptions
+2021-08-07 21:01:45,821:INFO:Preloading libraries
+2021-08-07 21:01:52,292:INFO:Initializing predict_model()
+2021-08-07 21:01:52,292:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(features_todrop=['CustomerID'],
+                                      ml_usecase='classification',
+                                      target='Churn Value')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacem...
+                ('fix_perfect', Remove_100(target='Churn Value')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select',
+                 Advanced_Feature_Selection_Classic(n_jobs=-1,
+                                                    random_state=7148,
+                                                    subclass='binary',
+                                                    target='Churn Value',
+                                                    top_features_to_pick=0.19999999999999996)),
+                ('fix_multi', 'passthrough'), ('dfs', 'passthrough'),
+                ('pca', 'passthrough'),
+                ['trained_model', GaussianNB(var_smoothing=0.1)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-08-07 21:01:52,293:INFO:Checking exceptions
+2021-08-07 21:01:52,293:INFO:Preloading libraries
+2021-08-07 21:01:56,947:INFO:Initializing predict_model()
+2021-08-07 21:01:56,947:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(features_todrop=['CustomerID'],
+                                      ml_usecase='classification',
+                                      target='Churn Value')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacem...
+                ('fix_perfect', Remove_100(target='Churn Value')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select',
+                 Advanced_Feature_Selection_Classic(n_jobs=-1,
+                                                    random_state=7148,
+                                                    subclass='binary',
+                                                    target='Churn Value',
+                                                    top_features_to_pick=0.19999999999999996)),
+                ('fix_multi', 'passthrough'), ('dfs', 'passthrough'),
+                ('pca', 'passthrough'),
+                ['trained_model', GaussianNB(var_smoothing=0.1)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-08-07 21:01:56,947:INFO:Checking exceptions
+2021-08-07 21:01:56,947:INFO:Preloading libraries
+2021-08-07 21:02:04,824:INFO:Initializing predict_model()
+2021-08-07 21:02:04,824:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(features_todrop=['CustomerID'],
+                                      ml_usecase='classification',
+                                      target='Churn Value')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacem...
+                ('fix_perfect', Remove_100(target='Churn Value')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select',
+                 Advanced_Feature_Selection_Classic(n_jobs=-1,
+                                                    random_state=7148,
+                                                    subclass='binary',
+                                                    target='Churn Value',
+                                                    top_features_to_pick=0.19999999999999996)),
+                ('fix_multi', 'passthrough'), ('dfs', 'passthrough'),
+                ('pca', 'passthrough'),
+                ['trained_model', GaussianNB(var_smoothing=0.1)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-08-07 21:02:04,825:INFO:Checking exceptions
+2021-08-07 21:02:04,825:INFO:Preloading libraries
+2021-08-07 21:02:46,951:INFO:Initializing load_model()
+2021-08-07 21:02:46,951:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-07 21:02:48,168:INFO:Initializing load_model()
+2021-08-07 21:02:48,168:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-07 21:05:56,889:INFO:Initializing load_model()
+2021-08-07 21:05:56,890:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-07 21:06:16,901:INFO:Initializing load_model()
+2021-08-07 21:06:16,902:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-07 21:07:42,834:INFO:Initializing load_model()
+2021-08-07 21:07:42,835:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-07 21:15:44,105:INFO:Initializing load_model()
+2021-08-07 21:15:44,105:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-07 21:16:34,188:INFO:Initializing load_model()
+2021-08-07 21:16:34,188:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-07 21:19:05,510:INFO:Initializing load_model()
+2021-08-07 21:19:05,510:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-07 21:19:35,966:INFO:Initializing load_model()
+2021-08-07 21:19:35,967:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-07 21:20:18,727:INFO:Initializing load_model()
+2021-08-07 21:20:18,728:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-07 21:20:45,098:INFO:Initializing load_model()
+2021-08-07 21:20:45,098:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-07 21:20:56,016:INFO:Initializing load_model()
+2021-08-07 21:20:56,017:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-07 21:20:57,283:INFO:Initializing load_model()
+2021-08-07 21:20:57,283:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-07 21:21:16,273:INFO:Initializing load_model()
+2021-08-07 21:21:16,273:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-07 21:21:52,904:INFO:Initializing load_model()
+2021-08-07 21:21:52,904:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-07 21:23:53,107:INFO:Initializing load_model()
+2021-08-07 21:23:53,107:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:17:24,973:INFO:Initializing load_model()
+2021-08-08 16:17:24,974:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:17:26,194:INFO:Initializing load_model()
+2021-08-08 16:17:26,194:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:17:57,240:INFO:Initializing load_model()
+2021-08-08 16:17:57,240:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:17:58,431:INFO:Initializing load_model()
+2021-08-08 16:17:58,431:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:19:12,057:INFO:Initializing load_model()
+2021-08-08 16:19:12,057:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:19:13,270:INFO:Initializing load_model()
+2021-08-08 16:19:13,270:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:19:35,149:INFO:Initializing load_model()
+2021-08-08 16:19:35,149:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:19:52,046:INFO:Initializing load_model()
+2021-08-08 16:19:52,046:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:20:56,838:INFO:Initializing load_model()
+2021-08-08 16:20:56,838:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:23:36,497:INFO:Initializing load_model()
+2021-08-08 16:23:36,497:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:25:05,084:INFO:Initializing load_model()
+2021-08-08 16:25:05,084:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:25:23,192:INFO:Initializing predict_model()
+2021-08-08 16:25:23,192:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(features_todrop=['CustomerID'],
+                                      ml_usecase='classification',
+                                      target='Churn Value')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacem...
+                ('fix_perfect', Remove_100(target='Churn Value')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select',
+                 Advanced_Feature_Selection_Classic(n_jobs=-1,
+                                                    random_state=7148,
+                                                    subclass='binary',
+                                                    target='Churn Value',
+                                                    top_features_to_pick=0.19999999999999996)),
+                ('fix_multi', 'passthrough'), ('dfs', 'passthrough'),
+                ('pca', 'passthrough'),
+                ['trained_model', GaussianNB(var_smoothing=0.1)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-08-08 16:25:23,192:INFO:Checking exceptions
+2021-08-08 16:25:23,192:INFO:Preloading libraries
+2021-08-08 16:25:31,318:INFO:Initializing predict_model()
+2021-08-08 16:25:31,318:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(features_todrop=['CustomerID'],
+                                      ml_usecase='classification',
+                                      target='Churn Value')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacem...
+                ('fix_perfect', Remove_100(target='Churn Value')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select',
+                 Advanced_Feature_Selection_Classic(n_jobs=-1,
+                                                    random_state=7148,
+                                                    subclass='binary',
+                                                    target='Churn Value',
+                                                    top_features_to_pick=0.19999999999999996)),
+                ('fix_multi', 'passthrough'), ('dfs', 'passthrough'),
+                ('pca', 'passthrough'),
+                ['trained_model', GaussianNB(var_smoothing=0.1)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-08-08 16:25:31,318:INFO:Checking exceptions
+2021-08-08 16:25:31,318:INFO:Preloading libraries
+2021-08-08 16:25:39,217:INFO:Initializing predict_model()
+2021-08-08 16:25:39,217:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(features_todrop=['CustomerID'],
+                                      ml_usecase='classification',
+                                      target='Churn Value')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacem...
+                ('fix_perfect', Remove_100(target='Churn Value')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select',
+                 Advanced_Feature_Selection_Classic(n_jobs=-1,
+                                                    random_state=7148,
+                                                    subclass='binary',
+                                                    target='Churn Value',
+                                                    top_features_to_pick=0.19999999999999996)),
+                ('fix_multi', 'passthrough'), ('dfs', 'passthrough'),
+                ('pca', 'passthrough'),
+                ['trained_model', GaussianNB(var_smoothing=0.1)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-08-08 16:25:39,217:INFO:Checking exceptions
+2021-08-08 16:25:39,217:INFO:Preloading libraries
+2021-08-08 16:25:47,539:INFO:Initializing predict_model()
+2021-08-08 16:25:47,539:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(features_todrop=['CustomerID'],
+                                      ml_usecase='classification',
+                                      target='Churn Value')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacem...
+                ('fix_perfect', Remove_100(target='Churn Value')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select',
+                 Advanced_Feature_Selection_Classic(n_jobs=-1,
+                                                    random_state=7148,
+                                                    subclass='binary',
+                                                    target='Churn Value',
+                                                    top_features_to_pick=0.19999999999999996)),
+                ('fix_multi', 'passthrough'), ('dfs', 'passthrough'),
+                ('pca', 'passthrough'),
+                ['trained_model', GaussianNB(var_smoothing=0.1)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-08-08 16:25:47,539:INFO:Checking exceptions
+2021-08-08 16:25:47,539:INFO:Preloading libraries
+2021-08-08 16:27:26,136:INFO:Initializing load_model()
+2021-08-08 16:27:26,136:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:29:32,079:INFO:Initializing load_model()
+2021-08-08 16:29:32,079:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:30:51,383:INFO:Initializing load_model()
+2021-08-08 16:30:51,383:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:31:01,477:INFO:Initializing predict_model()
+2021-08-08 16:31:01,477:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(features_todrop=['CustomerID'],
+                                      ml_usecase='classification',
+                                      target='Churn Value')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacem...
+                ('fix_perfect', Remove_100(target='Churn Value')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select',
+                 Advanced_Feature_Selection_Classic(n_jobs=-1,
+                                                    random_state=7148,
+                                                    subclass='binary',
+                                                    target='Churn Value',
+                                                    top_features_to_pick=0.19999999999999996)),
+                ('fix_multi', 'passthrough'), ('dfs', 'passthrough'),
+                ('pca', 'passthrough'),
+                ['trained_model', GaussianNB(var_smoothing=0.1)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-08-08 16:31:01,478:INFO:Checking exceptions
+2021-08-08 16:31:01,478:INFO:Preloading libraries
+2021-08-08 16:32:07,711:INFO:Initializing load_model()
+2021-08-08 16:32:07,711:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:33:50,874:INFO:Initializing load_model()
+2021-08-08 16:33:50,874:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:34:17,051:INFO:Initializing load_model()
+2021-08-08 16:34:17,051:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:34:28,211:INFO:Initializing load_model()
+2021-08-08 16:34:28,211:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:34:29,425:INFO:Initializing load_model()
+2021-08-08 16:34:29,425:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:34:54,245:INFO:Initializing load_model()
+2021-08-08 16:34:54,245:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:34:55,438:INFO:Initializing load_model()
+2021-08-08 16:34:55,439:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:36:00,146:INFO:Initializing load_model()
+2021-08-08 16:36:00,146:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:36:11,935:INFO:Initializing load_model()
+2021-08-08 16:36:11,935:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:37:58,456:INFO:Initializing load_model()
+2021-08-08 16:37:58,456:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:37:59,621:INFO:Initializing load_model()
+2021-08-08 16:37:59,621:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:39:49,164:INFO:Initializing load_model()
+2021-08-08 16:39:49,164:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:39:59,858:INFO:Initializing load_model()
+2021-08-08 16:39:59,858:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:43:24,359:INFO:Initializing load_model()
+2021-08-08 16:43:24,359:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:44:03,611:INFO:Initializing load_model()
+2021-08-08 16:44:03,611:INFO:load_model(model_name=assets/ml_models_binaries/last-nb-model, platform=None, authentication=None, verbose=True)
+2021-08-08 16:44:15,333:INFO:Initializing predict_model()
+2021-08-08 16:44:15,333:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(features_todrop=['CustomerID'],
+                                      ml_usecase='classification',
+                                      target='Churn Value')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacem...
+                ('fix_perfect', Remove_100(target='Churn Value')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select',
+                 Advanced_Feature_Selection_Classic(n_jobs=-1,
+                                                    random_state=7148,
+                                                    subclass='binary',
+                                                    target='Churn Value',
+                                                    top_features_to_pick=0.19999999999999996)),
+                ('fix_multi', 'passthrough'), ('dfs', 'passthrough'),
+                ('pca', 'passthrough'),
+                ['trained_model', GaussianNB(var_smoothing=0.1)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-08-08 16:44:15,333:INFO:Checking exceptions
+2021-08-08 16:44:15,333:INFO:Preloading libraries
+2021-08-08 16:44:49,637:INFO:Initializing predict_model()
+2021-08-08 16:44:49,637:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(features_todrop=['CustomerID'],
+                                      ml_usecase='classification',
+                                      target='Churn Value')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacem...
+                ('fix_perfect', Remove_100(target='Churn Value')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select',
+                 Advanced_Feature_Selection_Classic(n_jobs=-1,
+                                                    random_state=7148,
+                                                    subclass='binary',
+                                                    target='Churn Value',
+                                                    top_features_to_pick=0.19999999999999996)),
+                ('fix_multi', 'passthrough'), ('dfs', 'passthrough'),
+                ('pca', 'passthrough'),
+                ['trained_model', GaussianNB(var_smoothing=0.1)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-08-08 16:44:49,637:INFO:Checking exceptions
+2021-08-08 16:44:49,637:INFO:Preloading libraries
+2021-08-08 16:48:20,608:INFO:Initializing predict_model()
+2021-08-08 16:48:20,608:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(features_todrop=['CustomerID'],
+                                      ml_usecase='classification',
+                                      target='Churn Value')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacem...
+                ('fix_perfect', Remove_100(target='Churn Value')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select',
+                 Advanced_Feature_Selection_Classic(n_jobs=-1,
+                                                    random_state=7148,
+                                                    subclass='binary',
+                                                    target='Churn Value',
+                                                    top_features_to_pick=0.19999999999999996)),
+                ('fix_multi', 'passthrough'), ('dfs', 'passthrough'),
+                ('pca', 'passthrough'),
+                ['trained_model', GaussianNB(var_smoothing=0.1)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-08-08 16:48:20,608:INFO:Checking exceptions
+2021-08-08 16:48:20,608:INFO:Preloading libraries
+2021-08-08 16:49:28,888:INFO:Initializing predict_model()
+2021-08-08 16:49:28,888:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(features_todrop=['CustomerID'],
+                                      ml_usecase='classification',
+                                      target='Churn Value')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacem...
+                ('fix_perfect', Remove_100(target='Churn Value')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select',
+                 Advanced_Feature_Selection_Classic(n_jobs=-1,
+                                                    random_state=7148,
+                                                    subclass='binary',
+                                                    target='Churn Value',
+                                                    top_features_to_pick=0.19999999999999996)),
+                ('fix_multi', 'passthrough'), ('dfs', 'passthrough'),
+                ('pca', 'passthrough'),
+                ['trained_model', GaussianNB(var_smoothing=0.1)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-08-08 16:49:28,888:INFO:Checking exceptions
+2021-08-08 16:49:28,888:INFO:Preloading libraries
+2021-08-08 16:49:38,487:INFO:Initializing predict_model()
+2021-08-08 16:49:38,487:INFO:predict_model(estimator=Pipeline(steps=[('dtypes',
+                 DataTypes_Auto_infer(features_todrop=['CustomerID'],
+                                      ml_usecase='classification',
+                                      target='Churn Value')),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_strategy='mean',
+                                target_variable=None)),
+                ('new_levels1',
+                 New_Catagorical_Levels_in_TestData(replacem...
+                ('fix_perfect', Remove_100(target='Churn Value')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select',
+                 Advanced_Feature_Selection_Classic(n_jobs=-1,
+                                                    random_state=7148,
+                                                    subclass='binary',
+                                                    target='Churn Value',
+                                                    top_features_to_pick=0.19999999999999996)),
+                ('fix_multi', 'passthrough'), ('dfs', 'passthrough'),
+                ('pca', 'passthrough'),
+                ['trained_model', GaussianNB(var_smoothing=0.1)]]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=MLUsecase.CLASSIFICATION, display=None)
+2021-08-08 16:49:38,487:INFO:Checking exceptions
+2021-08-08 16:49:38,487:INFO:Preloading libraries

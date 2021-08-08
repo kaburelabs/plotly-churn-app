@@ -166,6 +166,7 @@
     margin: 0 auto;
     background: #e8ecef;
     padding: 16px;
+    border-radius: 0px 0px 8px 8px;
 }
 
 .buttonStyle-internal {
@@ -187,9 +188,71 @@
 
 
 .styleChurnExplanation {
-    max-width: 600px;
+    max-width: 680px;
     margin: 0 auto 32px;
     background: #f0f0f5;
     padding: 16px;
     border-radius: 8px;
+    display: flex;
+}
+
+.card-left-info {
+    width: 50%;
+    padding: 16px;
+    background: white;
+    margin-right: 8px;
+    border-radius: 8px;
+}
+
+.card-right-info {
+    width: 50%;
+    padding: 16px;
+    background: white;
+    margin-left: 8px;
+    border-radius: 8px;
+}
+
+.navbarColor {
+    background: gray;
+    padding: 8px;
+}
+
+.logo-title {
+    display: flex;
+}
+
+.nav-options {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+a {
+    color: #dae7f5;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    color: #fbfbfb;
+    font-weight: bold;
+    text-decoration: unset;
+}
+
+.linkBorder {
+    border-right: solid 1px;
+    padding-right: 8px;
+}
+
+.backgroundLoaded {
+    width: 650px;
+    margin: 0 auto;
+    background: #45968e;
+    /* color: white; */
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.white {
+    color:white;
 }

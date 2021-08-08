@@ -79,9 +79,12 @@ def toggle_navbar_collapse(n, is_open):
     Input("url", "pathname")
 )
 def getting_data(app_pathname):
-
-    if app_pathname == "/":
+    
+    if app_pathname in ["/", "/predictions"]:
         return prediction_layout
+        
+    elif app_pathname == "/explanable":
+        return html.Div(html.H2("Under development..."))
 
     else:
         raise PreventUpdate
