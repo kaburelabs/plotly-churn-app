@@ -32,25 +32,6 @@ prediction_layout=html.Div(
                                             style={"marginLeft":"5px", "cursor":"pointer"})],
                     className="text-center bottom32 top16"), 
             dbc.Tooltip(["Click here to get informations about what is churn prediction and the evaluation metric."], target="tooltip-churn-info"),
-            # dbc.Collapse(
-            #     [html.Div([
-            #             html.Div([
-            #                 html.H3("What Is Churn Prediction?", className="font-md bold"),
-            #                 html.Div([html.B("Churn predicition")," means detecting which customers are likely to cancel a subscription to a service based on how they use the service. It is a critical prediction for many businesses because acquiring new clients often costs more than retaining existing ones. Once you can identify those customers that are at risk of cancelling, you should know exactly what marketing action to take for each individual customer to maximise the chances that the customer will remain."], className="font-sm bottom16"),
-            #             ]),
-            #             html.Div([html.Div("KEY TAKEAWAYS", className="bold font-md bottom8"),
-            #                       html.Ul([
-            #                           html.Li("To this solution we are considering the metric 'PROFIT' to detect the best model.", className="bottom8"),
-            #                           html.Li(["To calculate the PROFIT metric it is considering a cost of ", 
-            #                                    html.B("$1000")," to each customer predicted as CHURN and an earn ", 
-            #                                    html.B("$5,000")," in CLTV for each customer correctly predicted."], className="bottom8"),
-            #                           html.Li(["Model evaluation metric formula: ", html.Br(), html.B("(TRUE_POSITIVE x $5000) - ((TRUE_POSITIVE+FALSE_POSITIVE) x $1000)"), ], className="bottom8"),
-            #                           html.Li("The algorithm choose was Naive Bayes", className="bottom8")
-            #                       ], className="font-sm")])
-            #         ], className="styleChurnExplanation")
-            #     ],
-            #     id="collapse-info-churn",
-            #     is_open=False),
             dbc.Collapse(
                 [html.Div([
                         html.Div([
@@ -74,18 +55,21 @@ prediction_layout=html.Div(
             html.Div(id="input-churn-sample", className="white font-sm bottom16"),
             html.Div([html.Div([html.Button(["Predict"], 
                                             id="btn-predict", 
-                                            className="buttonStyle right4"),
+                                            className="buttonStyle right4 white"),
                                   html.Button(["Load sample"], 
                                             id="btn-collapse-load-samples", 
-                                            className="buttonStyle left4"),
+                                            className="buttonStyle left4 white"),
                                      dbc.Collapse(
                                         [html.Div([
                                             html.Button(["Load one sample"], 
                                                 id="btn-load-one", 
-                                                className="buttonStyle-internal left4"),
+                                                className="buttonStyle-internal left4 white"),
                                             html.Button(["Load full dataset"], 
                                                 id="btn-load-full", 
-                                                className="buttonStyle-internal left4")
+                                                className="buttonStyle-internal left4 white"),
+                                            # html.Button(["Explain the Model"], 
+                                            #     id="btn-explain", 
+                                            #     className="buttonStyle-internal left4")
                                         ], className="hidden-buttons")],
                                         id="collapse",
                                         is_open=False,
@@ -380,7 +364,7 @@ def generating_dropdowns(dropdown_data):
                                                         type="number",
                                                         className="width-100"
                                                     )
-                                        ]), lg=3, className="bottom16"),
+                                        ]), lg=3, className="bottom16", style={"minWidth":"130px"}),
                                     dbc.Col(html.Div(
                                         [
                                             html.H4(["Monthly Charges", html.Span("*", style={"color":"red"})], className="font-sm"),
@@ -389,9 +373,9 @@ def generating_dropdowns(dropdown_data):
                                                         type="number",
                                                         className="width-100"
                                                     )
-                                        ]), lg=3, className="bottom16"),
+                                        ]), lg=3, className="bottom16", style={"minWidth":"150px"}),
                                 ])
-                        ], className="style-input-cards", style={"maxHeight":"156px"})
+                        ], className="style-input-cards grid-center", style={"maxHeight":"156px"})
                     ], lg=6)
                 ]
             )),
@@ -459,6 +443,17 @@ def getting_input_parameters(btn_predict, btn_load_one, btn_load_all, gender, se
     if button_id == "btn-load-one":
         return None, dash.no_update, False
 
+    permut_button=html.Div(html.Button(["Feature Weights"], id="btn-permutation", className="buttonStyle white bottom16"))
+    permutation_importance=html.Div([
+                dbc.Collapse(
+            html.Div([
+                html.H3("Permutation Feature Importance", className="font-md bold"),
+                html.Div("The values towards the top are the most important features, and those towards the bottom matter least."
+                         "The first number in each row shows how much model performance decreased with a random shuffling (in this case, using 'profit' as the performance metric).", className="bottom16 font-sm"),
+                html.Iframe(src="assets/images/html_file.html", className="wh-100")
+                ], className="margin-auto"), id="collapse-permutation-xai")
+    ])
+
     if button_id == "btn-load-full":
         
         time.sleep(5)
@@ -466,17 +461,30 @@ def getting_input_parameters(btn_predict, btn_load_one, btn_load_all, gender, se
         test_df = pd.read_csv("assets/data/telco-test.csv")
         churn_vals=test_df["Churn Value"].copy()
         test_df = data_transformation(test_df)  
+        
         predict_unseen = prediction(test_df)
         test_df["Churn Value"]=churn_vals
 
         score_unseen = test_score_report(test_df, predict_unseen)
 
         dash_result_component = html.Div([
-                    f"The potential profit generated by the model in a base of ", html.B(f"{test_df.shape[0]}")," customers is ", html.B(f"${score_unseen['Profit'].values[0]:,}"), ". With a recall of ", html.B(f"{round(score_unseen['Recall'].values[0],4)*100}%")," that means that the model predicted correctly ", html.B(f"{len(np.where((test_df['Churn Value'] == 1) & (predict_unseen['Label'] == 1))[0])}"), " over ", html.B(f"{len(np.where((test_df['Churn Value'] == 1))[0])}"), " customer who left the company services."
-                ], className="load-full-layout font-md"
+                    html.Div([
+                            f"The potential profit generated by the model in a base of ", html.B(f"{test_df.shape[0]}")," customers is ", html.B(f"${score_unseen['Profit'].values[0]:,}"), ". With a recall of ", html.B(f"{round(score_unseen['Recall'].values[0],4)*100}%")," that means that the model predicted correctly ", html.B(f"{len(np.where((test_df['Churn Value'] == 1) & (predict_unseen['Label'] == 1))[0])}"), " over ", html.B(f"{len(np.where((test_df['Churn Value'] == 1))[0])}"), " customer who left the company services."], className="bottom16"),
+                    permut_button,
+                ], className="load-full-layout font-md right8"
             )
 
-        return dash_result_component, dash.no_update, False
+        # permutation_importance=html.Div([
+        #     html.Div(html.Button(["Most Important Features"], id="btn-permutation")),
+        #     dbc.Collapse(
+        #         html.Div([
+        #             html.H3("Permutation Feature Importance", className="font-md bold"),
+        #             html.Iframe(src="assets/images/html_file.html", className="wh-100")
+        #             ], className="iFrameSize margin-auto"), id="collapse-permutation-xai")
+        # ], className="left8")
+
+        return html.Div([dash_result_component, 
+                         permutation_importance], className="result-layout"), dash.no_update, False
 
     else: 
 
@@ -488,11 +496,11 @@ def getting_input_parameters(btn_predict, btn_load_one, btn_load_all, gender, se
             
             string_list=", ".join([val for val in list_empty])
 
-            alert_string="You can't leva empty fields. Please, fill the ", html.Span(string_list, style={"font-weight":"bold"}), " fields before clicking on Predict button again."
+            alert_string="You can't leave empty fields. Please, fill the ", html.Span(string_list, style={"font-weight":"bold"}), " fields before clicking on Predict button again."
 
             return dash.no_update, alert_string, True
 
-        time.sleep(4)
+        time.sleep(2.5)
 
         user_new_input = create_input_table(all_inputs)
 
@@ -500,10 +508,23 @@ def getting_input_parameters(btn_predict, btn_load_one, btn_load_all, gender, se
 
         predictions=prediction(user_new_input)
 
-        will_churn="The model predicted that this customer will churn."
-        will_no_churn="The model predicted that this customer will not churn."
+        will_churn=html.Span(["The model predicted that this customer ", html.B("WILL CHURN.")], className="bottom16"), permut_button
+        will_no_churn=html.Span(["The model predicted that this customer ", html.B("WILL NOT CHURN.")], className="bottom16"), permut_button
 
-        return  dbc.Alert(f"{will_churn if int(predictions['Label'][0]) == 1 else will_no_churn}", className="alert-card-style"), dash.no_update, False
+
+        return  html.Div([dbc.Alert([html.Div(will_churn if int(predictions['Label'][0]) == 1 else will_no_churn), permutation_importance], className="predicted-alert-style"),
+                          ], className="result-layout"), dash.no_update, False
+
+
+@app.callback(
+    Output("collapse-permutation-xai", "is_open"),
+    Input("btn-permutation", "n_clicks"),
+    State("collapse-permutation-xai", "is_open")
+)
+def open_close_permutation(n, is_open):
+    if n:
+        return not is_open
+    return is_open
 
 
 @app.callback(

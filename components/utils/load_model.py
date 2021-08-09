@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score, roc_auc_score, precision_score, \
 import numpy as np
 
 # model = load_model('assets/ml_models_binaries/NB-final-baseline')
-model = load_model('assets/ml_models_binaries/last-nb-model')
+model = load_model('assets/ml_models_binaries/last-nb-model-2')
 
 def prediction(data_sample):
 

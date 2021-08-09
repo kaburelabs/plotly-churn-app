@@ -32,6 +32,7 @@ app.layout=html.Div([
         className="containerStyle")
 ])
 
+
 @app.callback(
     Output("df-app", "data"),
     Input("starting-div", "children")
@@ -69,6 +70,7 @@ def getting_data(app_data):
     [State("navbar-collapse", "is_open")],
 )
 def toggle_navbar_collapse(n, is_open):
+
     if n:
         return not is_open
     return is_open
@@ -79,10 +81,10 @@ def toggle_navbar_collapse(n, is_open):
     Input("url", "pathname")
 )
 def getting_data(app_pathname):
-    
+
     if app_pathname in ["/", "/predictions"]:
         return prediction_layout
-        
+
     elif app_pathname == "/explanable":
         return html.Div(html.H2("Under development..."))
 
@@ -93,4 +95,5 @@ def getting_data(app_pathname):
 
 if __name__ == '__main__':
     app.run_server(debug=True, port="8879")
+
 
